@@ -72,7 +72,7 @@
 | SIH25-A0H-T058 | QBic Innovators | Saadhana Rajmohan [CB.EN.U4MEE25144] | Mechanical Engineering |
 | SIH25-A0H-T059 | BrainStormers | Srehari K K (CB.EN.U4MEE25156) | Mechanical Engineering |
 | SIH25-A0H-T060 | AgriNex | KARRI YASHWANTH [CB.EN.U4ARE24018] | Mechanical Engineering |
-| SIH25-A0H-T061 | Tech Titians (TBC) | MADHULIKA KANDHIRAJU [CB.EN.U4ELC25117] | Electrical Engineering |
+| SIH25-A0H-T061 | Tech Tigers | MADHULIKA KANDHIRAJU [CB.EN.U4ELC25117] | Electrical Engineering |
 | SIH25-A0H-T062 | Overlychalant | S Venkat Rajaraman [CB.SC.U4CYS25141] | Mixed Team |
 | SIH25-A0H-T063 | HackCrew | R Vishal [CB.SC.U4CSE25742] | Computer Science and Engineering |
 | SIH25-A0H-T064 | Code Crew | Srinath Balakrishnan [CB.AI.U4AIM25040] | Mixed Team |
@@ -80,7 +80,7 @@
 | SIH25-A0H-T066 | VdF5n | Juswanth S [CB.EN.U4MEE25124] | Mixed Team |
 | SIH25-A0H-T067 | PLEIADES | Rhea Radhakrishnan Nair [CB.SC.U4CSE25649] | Computer Science and Engineering |
 | SIH25-A0H-T068 | Data Dynamos | SHRIRAAM MEYYAPPAN RM [CB.EN.U4ECE24051] | Mixed Team |
-| SIH25-A0H-T069 | Code Catalysts (TBC) | R Veda Vamsi Krishna [CB.SC.U4CSE25346] | Mixed Team |
+| SIH25-A0H-T069 | Tudum | R Veda Vamsi Krishna [CB.SC.U4CSE25346] | Mixed Team |
 | SIH25-A0H-T070 | Hack0ps (TBC) | Hiteshraj V [CB.SC.U4CYS25120] | Cyber Security |
 | SIH25-A0H-T071 | Works On My Machine | Nitansh Shankar [CB.SC.U4CSE24431] | Mixed Team |
 | SIH25-A0H-T072 | LoRA the Explorers | Rutav Desai [CB.SC.U4CSE24664] | Mixed Team |
@@ -108,7 +108,7 @@
 | SIH25-A0H-T094 | go_touch_grass.exe | HARSHITA R [CB.SC.U4CSE23028] | Mixed Team |
 | SIH25-A0H-T095 | Ace Programmers | Dharshan S [CB.SC.U4CSE25614] | Computer Science And Engineering |
 | SIH25-A0H-T096 | ODYSSEY | Vipin Sudhakar [CB.AI.U4AID25166] | Artificial Intelligence |
-| SIH25-A0H-T097 | TBD | Kousik kumar [CB.EN.U4ARE25022] | Mechanical Engineering |
+| SIH25-A0H-T097 | Narrow Crew | Kousik kumar [CB.EN.U4ARE25022] | Mechanical Engineering |
 | SIH25-A0H-T098 | Codeezy | Shree Netthe G P [CB.EN.U4ECE23159] |  Mixed Team |
 | SIH25-A0H-T199 | MediCode | BELLAMKONDA SRIRAM HARI CHARAN [CB.SC.U4CSE25110] | Computer Science And Engineering |
 | SIH25-A0H-T100 | Code Crew (TBC) | SATYA PRAKASH S M [CB.SC.U4CSE25051] | Computer Science And Engineering |
@@ -124,7 +124,7 @@
 | SIH25-A0H-T110 | Sternritters | SRINIDHI S [CB.SC.U4CYS23047] | Cyber Security |
 | SIH25-A0H-T111 | SmartAgro | Varsha P [CB.SC.U4AIE25141] | Artificial Intelligence |
 | SIH25-A0H-T112 | Code Alchemy | Bharath G [CB.SC.U4CSE24005] | Computer Science And Engineering |
-| SIH25-A0H-T113 | TBD | Naksh Singh [CB.SC.U4AIE23361] | Artificial Intelligence |
+| SIH25-A0H-T113 | Aquanauts | Naksh Singh [CB.SC.U4AIE23361] | Artificial Intelligence |
 | SIH25-A0H-T114 | NEXUS | M Jahnavi [CB.SC.U4CSE25725] | Computer Science And Engineering |
 | SIH25-A0H-T115 | The Syntax Squad | Bala Praneeth.S [CB.SC.U4CSE23311] | Mixed Team |
 | SIH25-A0H-T116 | Code Champs | VANDANA HEMA SIVA KUMAR [CB.SC.U4CSE25564] | Computer Science And Engineering |
@@ -139,7 +139,7 @@
 | SIH25-A0H-T125 | Automation Avengers  | GALANAGARI KARTHIK REDDY [CB.EN.U4ARE25016] | Mechanical Engineering |
 | SIH25-A0H-T126 | The Dynamic Entities | Annapureddy Dharaneesh [CB.SC.U4CYS24107] | Cyber Security |
 | SIH25-A0H-T127 | Hackeys | Kabilan Mohanraj [CB.SC.U4CYS24123] | Cyber Security |
-| SIH25-A0H-T128 | BrainStormers (TBC) | Thirupugazhl S D [CB.EN.U4EEE24149] | Electrical Engineering |
+| SIH25-A0H-T128 | Ecotrons | Thirupugazhl S D [CB.EN.U4EEE24149] | Electrical Engineering |
 | SIH25-A0H-T129 | 200_OK | VINAYBAALAJI P N S [CB.SC.U4CYS24061] | Cyber Security |
 | SIH25-A0H-T130 | Root Force | AKASH VARUNN D [CB.SC.U4CYS23001] |  Cyber Security |
 | SIH25-A0H-T131 | Team Antifragile  | Kinnera Deepthi [CB.SC.P2CSE25018] | Mixed Team |
@@ -236,7 +236,7 @@
 | SIH25-A0H-T222 | Tourist Shield | Suhas Nethi [CB.SC.U4CSE23449] | Mixed Team |
 | SIH25-A0H-T223 | GJ MaVeNS | VENKATA KRISHNAN M [CB.SC.U4CSE25565] | Computer Science and Engineering |
 | SIH25-A0H-T224 | MATMAP | Praveen C S [CB.EN.U4ECE23031] | Electronics Engineering |
-| SIH25-A0H-T225 | TBD | Vishwa S [CB.EN.U4EEE24154] | Mixed Team |
+| SIH25-A0H-T225 | Ecodrain Six | Vishwa S [CB.EN.U4EEE24154] | Mixed Team |
 | SIH25-A0H-T226 | Code blanc | Adithya Dhananjayan [CB.SC.U4AIE23302] | Mixed Team |
 | SIH25-A0H-T227 | CODE-BLOODED (TBC) | NISSHITHA B S [CB.AI.U4AIM25024] | Artificial Intelligence |
 | SIH25-A0H-T228 | ECOTRONIX  | SHAUREYA S [CB.EN.U4ECE25043] | Electronics Engineering |
@@ -262,6 +262,7 @@
 | SIH25-A0H-T248 | TBC | B Gokul Akash [CB.SC.U4CSE25310] | Mixed Team |
 | SIH25-A0H-T249 | TechNova | Prathibaa.V.R [CB.AI.U4AID25144] | Artificial Intelligence |
 | SIH25-A0H-T250 | Savyans | Siddharth Kiran Kumar Khathuria [CB.EN.U4CCE24048] | Electronics Engineering |
+| SIH25-A0H-T251 | Coders Creed | P Dheva Dharshan [CB.SC.U4CSE25737] |  Computer Science and Engineering |
 | SIH25-A0H-T251 | Velocity Visioners | Samiksha Balamurugan (CB.EN.U4CCE25138) | Mixed Team |
 | SIH25-A0H-T252 | Byte Binders | Roshan S I [CB.AI.U4AAR25042] | Artificial Intelligence |
 | SIH25-A0H-T253 | Internlink | GUDELA ROOP SIVA KARTHEEK [CB.AI.U4AID24116] | Artificial Intelligence |
@@ -292,7 +293,7 @@
 | SIH25-A0H-T278 | RoamX | Sahana R [CB.AI.U4AIM24037] | Artificial Intelligence |
 | SIH25-A0H-T279 | Team Alpha  | A MOHAN SIDDHARTHA REDDY [CB.EN.U4ELC24003] | Electrical Engineering |
 | SIH25-A0H-T280 | Vyomear | Umaa Maheswaran V [CB.EN.U4ECE22260] | Electronics Engineering |
-| SIH25-A0H-T281 | Acqua Guardians | VARUNESH ANANDAN [CB.EN.U4EEE22153] | Electrical Engineering |
+| SIH25-A0H-T281 | Acqua Guardians | VARUNESH ANANDAN [CB.EN.U4EEE22153] | Mixed Team |
 | SIH25-A0H-T282 | Credora | Mithuraa Senthilkumar [CB.SC.U4CSE24527] | Mixed Team | 
 | SIH25-A0H-T283 | Hackflare | Giridharan R [CB.SC.U4CSE25119] | Computer Science and Engineering |
 | SIH25-A0H-T284 | Nexus Cartel | ZAHWA K [CB.SC.U4AIE24261] | Artificial Intelligence |
@@ -312,14 +313,14 @@
 | SIH25-A0H-T298 | TechTonic (TBC) | T SAUMIYA [CB.SC.U4CSE24651] | Computer Science and Engineering |
 | SIH25-A0H-T299 | Byte Busters (TBC) | B BARATH KUMAR [CB.EN.U4CCE24107] | Electronics Engineering |
 | SIH25-A0H-T300 | HackforeX | GAYATHRI BINU [CB.EN.U4ECE25213] | Mixed Team |
-| SIH25-A0H-T301 | Hardwired Solutions  | SANJITHA RAGUPATHY [CB.EN.U4ELC24036] | Electrical Engineering |
+| SIH25-A0H-T301 | Hardwired Solutions  | NABINATH S [CB.EN.U4EEE24028] | Electrical Engineering |
 | SIH25-A0H-T302 | UnBrokenChain | Varun Raj V [CB.SC.U4CSE23556] | Computer Science and Engineering |
 | SIH25-A0H-T303 | VanGuards | Raghav N [CB.SC.U4AIE23059] | Artificial Intelligence |
 | SIH25-A0H-T304 | BhoomiBotics | Mernidi Sai Vital Ashish [CB.EN.U4MEE24158] | Mechanical Engineering |
 | SIH25-A0H-T305 | Chitti Chitti Robo | Yashas Senthil Kumar [CB.SC.U4CSE25464] | Mixed Team |
 | SIH25-A0H-T306 | InnovIndians | ILLINDALA KARTHIK SAIHARSH [CB.SC.U4CSE23325] | Computer Science and Engineering |
 | SIH25-A0H-T307 | Safe Line | AKSHATH SENTHILKUMAR [CB.EN.U4ELC23003] | Electrical Engineering |
-| SIH25-A0H-T308 | Nexus (TBC) | A K KARTHIK [CB.EN.U4ELC24001] | Electrical Engineering |
+| SIH25-A0H-T308 | Hexagram | A K KARTHIK [CB.EN.U4ELC24001] | Electrical Engineering |
 | SIH25-A0H-T309 | Akatsuki | SHRIJITH S [CB.EN.U4ELC25136] | Electrical Engineering |
 | SIH25-A0H-T310 | AI OnTrack | ROHITH V [CB.AI.U4AID24144] | Artificial Intelligence |
 | SIH25-A0H-T311 | Confluence | PATTEM HEMANTH KUMAR REDDY [CB.SC.U4CSE23763] | Computer Science and Engineering |
@@ -337,19 +338,19 @@
 | SIH25-A0H-T323 | SYNERGY | KOLLI SAI PRAVEEN REDDY [CB.SC.P2CSE25019] | Computer Science and Engineering |
 | SIH25-A0H-T324 | Trixie | SHYAM SUNDAR RAJU [CB.SC.U4CSE23049] | Mixed Team |
 | SIH25-A0H-T325 | Code4Cause | THOTAKURA SRIHITHA [CB.SC.U4CSE23450] | Computer Science and Engineering |
-| SIH25-A0H-T326 | Synergy (TBC) | Varun Mahesh Menon [CB.SC.P2AIE25031] | Mixed Team |
+| SIH25-A0H-T326 | Novaforge | Varun Mahesh Menon [CB.SC.P2AIE25031] | Mixed Team |
 | SIH25-A0H-T327 | Agri  | ABHISHEK K [CB.EN.U4MEE23101] | Mixed Team |
 | SIH25-A0H-T328 | Strikers | MALIKIREDDY PRANAVI [CB.AI.U4AID25130] | Mixed Team |
-| SIH25-A0H-T329 | Hackhive (TBC) | P R Thanusri [CB.EN.U4ELC24131] | Mixed Team |
+| SIH25-A0H-T329 | Electranova | P R Thanusri [CB.EN.U4ELC24131] | Mixed Team |
 | SIH25-A0H-T330 | InnovAura | Aradhana Kumar [CB.EN.U4ECE24103] | Electronics Engineering |
 | SIH25-A0H-T331 | NeoVortex | VISHAL KRISHNAA R [CB.EN.U4ARE24057] | Mechanical Engineering |
 | SIH25-A0H-T332 | SYNTAX SORCERERS | THATHA VENKATA SADASIVA PHANINDRA GUPTHA [CB.AI.U4AID25055] | Artificial Intelligence |
 | SIH25-A0H-T333 | ARSEN | SUJITHKANNAN MAHALINGAM RENUKA DEVI [CB.EN.U4ARE24049] | Mixed Team |
 | SIH25-A0H-T334 | Bolt force | VISHNU PRASATH M [CB.EN.U4MEE25154] | Mechanical Engineering |
-| SIH25-A0H-T335| 404 (TBC) | Sanjay Balaji S [CB.EN.U4ELC25132] | Mixed Team |
+| SIH25-A0H-T335 | Elliot | Sanjay Balaji S [CB.EN.U4ELC25132] | Mixed Team |
 | SIH25-A0H-T336 | Tech Farmers | Rishikesh [CB.SC.U4AIE24365] | Artificial Intelligence |
 | SIH25-A0H-T337 | #Include & Conquer | Motati Ruthvik Reddy [CB.SC.P2AIE25013] | Mixed Team |
-| SIH25-A0H-T338 | CSK (TBC) | Moorthi S P [CB.SC.U4CSE24429] | Computer Science Engineering |
+| SIH25-A0H-T338 | Horizon X | Moorthi S P [CB.SC.U4CSE24429] | Computer Science Engineering |
 | SIH25-A0H-T339 | Hacktivists | VATTURU PARDHEEV [CB.SC.U4AIE23344] | Artificial Intelligence |
 | SIH25-A0H-T340 | FuturEase | Hasrath Ali Umar A [CB.SC.U4CSE24417] | Computer Science Engineering |
 | SIH25-A0H-T341 | Aesthys | Nitin Krishna Vimal Kumar [CB.SC.U4AIE23156] | Artificial Intelligence |
@@ -358,5 +359,6 @@
 | SIH25-A0H-T344 | The Sixth Sense | Arham Garg [CB.SC.U4CSE24206] | Computer Science Engineering |
 | SIH25-A0H-T345 | MicroBusters | SANJITH KISHORE K S [CB.SC.U4CSE25551] | Computer Science Engineering |
 
-* TBC - To Be Change: Team Leaders should propose a New Team Name.
+
+
 
