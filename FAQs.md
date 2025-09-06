@@ -1,5 +1,9 @@
 # Amrita Vishwa Vidyapeetham
 
+<p align="center">
+    <img src="Assets/images/header.png" width=950 alt="header" />
+</p>
+
 ## Smart India Hackathon - 2025
 
 ### Frequently Asked Questions (FAQs)
