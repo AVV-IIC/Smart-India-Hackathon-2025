@@ -1,10 +1,12 @@
-# Amrita Vishwa Vidyapeetham
-
 <p align="center">
     <img src="../Assets/images/header.png" width=950 alt="header" />
 </p>
 
 ## Smart India Hackathon - 2025
+![](https://img.shields.io/badge/Registration_Open-29th_Aug-darkgreen) ![](https://img.shields.io/badge/Registration_Closed-05th_Sept-red) <br/>
+![](https://img.shields.io/badge/Finalization_of_Teams-06th_Sept-purple) <br/>
+![](https://img.shields.io/badge/Presentation_Submission-12th_Sept-brown) <br/>
+![](https://img.shields.io/badge/Internal_Hackathon-16th_to_20th_Sept-gold)
 
 ### Internal Hackathon Registered Teams
 
@@ -357,3 +359,4 @@
 | SIH25-A0H-T345 | MicroBusters | SANJITH KISHORE K S [CB.SC.U4CSE25551] | Computer Science Engineering |
 
 * TBC - To Be Change: Team Leaders should propose a New Team Name.
+
