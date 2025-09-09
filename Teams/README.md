@@ -358,3 +358,9 @@
 | SIH25-A0H-T343 | Tensor Troops | S.Sajeev [CB.SC.U4AIE23272] | SIH23126 |
 | SIH25-A0H-T344 | The Sixth Sense | Arham Garg [CB.SC.U4CSE24206] | SIH25080 |
 | SIH25-A0H-T345 | MicroBusters | Sanjith Kishore K S [CB.SC.U4CSE25551] | SIH25036 |
+| SIH25-A0H-T346 | Endevors | Varadharajan K [CB.SC.P2AIE25030] | SIH25013 |
+| SIH25-A0H-T347 | Cosmic Coders | Sai Jitesh CK [CB.AI.U4QTS25016] | SIH25002 |
+| SIH25-A0H-T348 | PiXels~ | Meghana Kotharu [CB.SC.U4AIE24232] | SIH25046 |
+
+
+
