@@ -3593,7 +3593,7 @@ Date: 10th Sept 2025
 <td>SIH25035</td>
 <td>No Mentor</td>
 </tr><tr>
-<td></td>
+<td>No Mentor</td>
 <td>Impossible Mission Force</td>
 <td>Surya Santhosh Kumar (CB.EN.U4AIE22049)</td>
 <td>Kavya Sakthivel (CB.EN.U4AIE22065)</td>
@@ -3639,5 +3639,146 @@ Date: 10th Sept 2025
         });
     });
 </script>
+
+<!-- Chart.js dashboards: Team composition (UG/PG/Mixed) and Problem Statement distribution -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div id="chartsContainer" style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; align-items:flex-start; margin:12px 0;">
+  <div style="width:260px; max-width:45%; min-width:200px;">
+    <canvas id="teamChart"></canvas>
+  </div>
+  <div style="width:260px; max-width:45%; min-width:200px;">
+    <canvas id="psChart"></canvas>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function classifyRoll(roll) {
+    if (!roll) return null;
+    roll = roll.toString().toUpperCase();
+    if (roll.indexOf('U3') !== -1 || roll.indexOf('U4') !== -1) return 'UG';
+    if (roll.indexOf('P2') !== -1 || roll.indexOf('I5') !== -1) return 'PG';
+    return null;
+  }
+
+  const ths = Array.from(document.querySelectorAll('table thead th'));
+  const headerTexts = ths.map(th => (th.textContent || '').trim().toUpperCase());
+  // find PS index (robust)
+  let psIndex = headerTexts.findIndex(t => t.includes('PS') || t.includes('PROBLEM') || t.includes('PS #') );
+  if (psIndex === -1) {
+    // fallback: search for 'PS' substring anywhere
+    psIndex = headerTexts.findIndex(t => /PS/.test(t));
+  }
+
+  // find leader column index
+  let leaderIndex = headerTexts.findIndex(t => t.includes('LEADER'));
+  if (leaderIndex === -1) leaderIndex = 2; // fallback
+
+  const startMember = Math.max(leaderIndex + 1, 2);
+  const endMember = (psIndex !== -1) ? psIndex : (ths.length - 2);
+
+  const rows = Array.from(document.querySelectorAll('table tbody tr'));
+  const teamTypes = { 'UG Only':0, 'PG Only':0, 'Mixed':0, 'Unclassified':0 };
+
+  rows.forEach(row => {
+    const tds = Array.from(row.querySelectorAll('td'));
+    // Determine member cells robustly
+    const memberCells = tds.slice(startMember, (psIndex !== -1) ? psIndex : (tds.length - 2));
+    const categories = new Set();
+    memberCells.forEach(td => {
+      const txt = (td && td.textContent) ? td.textContent.trim() : '';
+      const type = classifyRoll(txt);
+      if (type) categories.add(type);
+    });
+
+    if (categories.size === 1 && categories.has('UG')) teamTypes['UG Only']++;
+    else if (categories.size === 1 && categories.has('PG')) teamTypes['PG Only']++;
+    else if (categories.has('UG') && categories.has('PG')) teamTypes['Mixed']++;
+    else teamTypes['Unclassified']++;
+  });
+
+  // Team composition chart
+  try {
+    const ctx = document.getElementById('teamChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: Object.keys(teamTypes),
+        datasets: [{
+          data: Object.values(teamTypes),
+          backgroundColor: ['#4CAF50','#2196F3','#FFC107','#9E9E9E'],
+          borderColor: '#ffffff',
+          borderWidth: 1,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: { display: true, text: 'Teams by UG / PG / Mixed Composition' }
+        }
+      }
+    });
+    document.getElementById('teamChart').style.height = '220px';
+  } catch (e) {
+    console.error('teamChart error', e);
+  }
+
+  // Problem Statement counts
+  const psCounts = {};
+  rows.forEach(row => {
+    const tds = Array.from(row.querySelectorAll('td'));
+    let ps = 'Unknown';
+    if (psIndex !== -1 && tds[psIndex]) {
+      ps = (tds[psIndex].textContent || '').trim() || 'Unknown';
+    } else {
+      // fallback: try last 2 columns for something that looks like SIH or PS#
+      for (let i = tds.length-1; i >= Math.max(0, tds.length-5); i--) {
+        const txt = (tds[i] && tds[i].textContent) ? tds[i].textContent.trim() : '';
+        if (/SIH/i.test(txt) || /PS|PROBLEM/i.test(txt)) { ps = txt; break; }
+      }
+    }
+    psCounts[ps] = (psCounts[ps] || 0) + 1;
+  });
+
+  // Prepare labels and colors
+  const psLabels = Object.keys(psCounts);
+  const psData = Object.values(psCounts);
+  const psColors = psLabels.map((_,i) => 'hsl(' + Math.round(i * (360/Math.max(1, psLabels.length))) + ' 70% 50%)');
+
+  try {
+    const ctx2 = document.getElementById('psChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: psLabels,
+        datasets: [{
+          data: psData,
+          backgroundColor: psColors,
+          borderColor: '#ffffff',
+          borderWidth: 1,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: { display: true, text: 'Problem Statement Distribution' }
+        }
+      }
+    });
+    document.getElementById('psChart').style.height = '220px';
+  } catch (e) {
+    console.error('psChart error', e);
+  }
+
+});
+</script>
+
 </body>
 </html>
