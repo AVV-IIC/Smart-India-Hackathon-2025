@@ -152,7 +152,7 @@
 | SIH25-A0H-T138 | Digital Innovators | Karthick B [CB.EN.U4CCE23021] | SIH25029 |
 | SIH25-A0H-T139 | Teen Titans | M Dharshan [CB.EN.U4ARE25024] | SIH25012 |
 | SIH25-A0H-T140 | QUANTUM HACKS | P K Pranav [CB.SC.U4CYS25037] | SIH25010 |
-| SIH25-A0H-T141 | CODE ALCHEMY | Rohith S [CB.EN.U4CCE24042] | SIH25133 |
+| SIH25-A0H-T141 | CODE ALCHEMY (TBC) | Rohith S [CB.EN.U4CCE24042] | SIH25133 |
 | SIH25-A0H-T142 | Code Enforcers | Praneeth U [CB.SC.U4CSE23233] | SIH25013 |
 | SIH25-A0H-T143 | Esprits Innovators | Chandavaram Abhijith Sarma [CB.SC.U4CSE25316] | SIH25012 |
 | SIH25-A0H-T144 | HACK HIVE | Nallabati Sai Varun [CB.SC.U4CYS25034] | SIH25012 |
@@ -263,104 +263,105 @@
 | SIH25-A0H-T249 | TechNova | Prathibaa.V.R [CB.AI.U4AID25144] | SIH25009 |
 | SIH25-A0H-T250 | Savyans | Siddharth Kiran Kumar Khathuria [CB.EN.U4CCE24048] | SIH25034 |
 | SIH25-A0H-T251 | Coders Creed | P Dheva Dharshan [CB.SC.U4CSE25737] | SIH25048 |
-| SIH25-A0H-T251 | Velocity Visioners | Samiksha Balamurugan (CB.EN.U4CCE25138) | SIH25100 |
-| SIH25-A0H-T252 | Byte Binders | Roshan S I [CB.AI.U4AAR25042] | SIH25050 |
-| SIH25-A0H-T253 | Internlink | Gudela Roop Siva Kartheek [CB.AI.U4AID24116] | SIH25034 |
-| SIH25-A0H-T254 | TBD | Sunath Reha Sreekumar [CB.AI.U4AIM24146] | SIH25025 |
-| SIH25-A0H-T255 | TEAM ECLIPSE | Pranavi Singamsetty [CB.AI.U4AAR25038] | SIH25028 |
-| SIH25-A0H-T256 | Clean India | Pradosh Gnana Sekar [CB.EN.U4CCE23037] | SIH25046 |
-| SIH25-A0H-T257 | AeroMatrix | Gandham Sai Sumanth [CB.EN.U4MEE24121] | SIH25125 |
-| SIH25-A0H-T258 | The Algorythms | Ganesh K [CB.EN.U4EEE24016] | |
-| SIH25-A0H-T259 | Innovators | Tammurothu Amrutha [CB.SC.U4AIE24255] | |
-| SIH25-A0H-T260 | Kernel Guardians | S Varun Shankar [CB.SC.U4CSE24345] | SIH25017 |
-| SIH25-A0H-T261 | Hexa Core | Dondluru Keerthana [CB.SC.U4AIE24112] | SIH25012 |
-| SIH25-A0H-T262 | MindMesh | Amirthavarshini B [CB.AI.U4AIM24154] | SIH25076 |
-| SIH25-A0H-T263 | Code Crusaders (TBC) | Renee Bhatt [CB.SC.U4CYS24048] | SIH25094 |
-| SIH25-A0H-T264 | HackHexa | Krishanth K [CB.SC.U4CSE24521] | SIH25022 |
-| SIH25-A0H-T265 | Pathify | Sathya Roopan M [CB.SC.U4CSE23256] | SIH25094 |
-| SIH25-A0H-T266 | Estuary | Krithika V [CB.EN.U4CCE23024] | SIH25039 |
-| SIH25-A0H-T267 | Cleopatra Coders | Muppirisetty Bhargavi Sai Hansika [CB.EN.U4ELC24125] | SIH25008 |
-| SIH25-A0H-T268 | 4ARMS | Kowshik V [CB.SC.U4AIE23314] | SIH25083 |
-| SIH25-A0H-T269 | The Kea | Anjana Krishna A [CB.SC.U4CYS25005] | SIH25030 |
-| SIH25-A0H-T270 | Printelligence | Navanith Sampathkumar [CB.EN.U4MEE23158] | SIH25095 |
-| SIH25-A0H-T271 | DeepBlue | Siva Sashreek R [CB.AI.U4AID24054] | |
-| SIH25-A0H-T272 | SoulSync | Anwita Subbiah Velayutham [CB.SC.U4CYS23003] | SIH25092 |
-| SIH25-A0H-T273 | HEXAFORCE | Vaisakhi.S.Chandran [CB.EN.U4EEE24050] | SIH25079 |
-| SIH25-A0H-T274 | CodeIt | D S Yazhini [CB.EN.U4ECE25008] | SIH25077 |
-| SIH25-A0H-T275 | TBC | Puvidhan M V [CB.EN.U4MEE24034] | SIH25047 |
-| SIH25-A0H-T276 | TBC | S Pooja Shree [CB.SC.U4CSE23346] | SIH25126 |
-| SIH25-A0H-T277 | Debug Divas | Pooja N [CB.SC.U4AIE24242] | SIH25071 |
-| SIH25-A0H-T278 | RoamX | Sahana R [CB.AI.U4AIM24037] | SIH25082 |
-| SIH25-A0H-T279 | Team Alpha | A Mohan Siddhartha Reddy [CB.EN.U4ELC24003] | SIH25014 |
-| SIH25-A0H-T280 | Vyomear | Umaa Maheswaran V [CB.EN.U4ECE22260] | SIH25117 |
-| SIH25-A0H-T281 | Acqua Guardians | Varunesh Anandan [CB.EN.U4EEE22153] | SIH25036 |
-| SIH25-A0H-T282 | Credora | Mithuraa Senthilkumar [CB.SC.U4CSE24527] | SIH25038 |
-| SIH25-A0H-T283 | Hackflare | Giridharan R [CB.SC.U4CSE25119] | SIH25094 |
-| SIH25-A0H-T284 | Nexus Cartel | Zahwa K [CB.SC.U4AIE24261] | SIH25083 |
-| SIH25-A0H-T285 | ResQ Wings | S Ajeth [CB.SC.U4CSE23142] | SIH25047 |
-| SIH25-A0H-T286 | Hackaholics (TBC) | Advik Gautam [CB.SC.U4CYS25104] | SIH25076 |
-| SIH25-A0H-T287 | SYN6 | Adithya Menon R [CB.SC.U4CSE23506] | SIH25080 |
-| SIH25-A0H-T288 | Fuse force | Priyaranjan S J [CB.EN.U4EEE23024] | SIH25054 |
-| SIH25-A0H-T289 | Haul | Vendra Punith Sai [CB.SC.U4CSE23768] | SIH25137 |
-| SIH25-A0H-T290 | Hacura | Shahana G [CB.EN.U4ELC25036] | SIH25098 |
-| SIH25-A0H-T291 | SIKHYA JAGRITI | Kamalesh [CB.EN.U4MEE23023] | SIH25019 |
-| SIH25-A0H-T292 | Eshwar | Latha E [CB.PS.I5DAS22030] | SIH25118 |
-| SIH25-A0H-T293 | Baymax 2.0 | Vijay Santhosh P [CB.SC.U4AIE23157] | SIH25024 |
-| SIH25-A0H-T294 | Internova | Varada Srikrishnan [CB.PS.I5DAS23112] | SIH25034 |
-| SIH25-A0H-T295 | Microbusterz | Kishor Kumar [CB.EN.U4ARE24019] | SIH25036 |
-| SIH25-A0H-T296 | Built2Solve | Ranjith Raja B [CB.SC.U4AIE24250] | SIH25050 |
-| SIH25-A0H-T297 | AlgoWavez | Aadhil Ahamed A [CB.EN.U4ECE25201] | SIH25016 |
-| SIH25-A0H-T298 | TechTonic (TBC) | T Saumiya [CB.SC.U4CSE24651] | SIH25138 |
-| SIH25-A0H-T299 | Byte Busters (TBC) | B Barath Kumar [CB.EN.U4CCE24107] | SIH25109 |
-| SIH25-A0H-T300 | HackforeX | Gayathri Binu [CB.EN.U4ECE25213] | SIH25082 |
-| SIH25-A0H-T301 | Hardwired Solutions | Nabinath S [CB.EN.U4EEE24028] | SIH25020 |
-| SIH25-A0H-T302 | UnBrokenChain | Varun Raj V [CB.SC.U4CSE23556] | SIH25045 |
-| SIH25-A0H-T303 | VanGuards | Raghav N [CB.SC.U4AIE23059] | SIH12508 |
-| SIH25-A0H-T304 | BhoomiBotics | Mernidi Sai Vital Ashish [CB.EN.U4MEE24158] | SIH25109 |
-| SIH25-A0H-T305 | Chitti Chitti Robo | Yashas Senthil Kumar [CB.SC.U4CSE25464] | SIH25071 |
-| SIH25-A0H-T306 | InnovIndians | Illindala Karthik Saiharsh [CB.SC.U4CSE23325] | SIH25031 |
-| SIH25-A0H-T307 | Safe Line | Akshath Senthilkumar [CB.EN.U4ELC23003] | SIH25079 |
-| SIH25-A0H-T308 | Hexagram | A K Karthik [CB.EN.U4ELC24001] | SIH25100 |
-| SIH25-A0H-T309 | Akatsuki | Shrijith S [CB.EN.U4ELC25136] | SIH25095 |
-| SIH25-A0H-T310 | AI OnTrack | Rohith V [CB.AI.U4AID24144] | SIH25022 |
-| SIH25-A0H-T311 | Confluence | Pattem Hemanth Kumar Reddy [CB.SC.U4CSE23763] | SIH25031 |
-| SIH25-A0H-T312 | Logikon | Swarna Dharshini S [CB.SC.P2CSE25036] | SIH25092 |
-| SIH25-A0H-T313 | The One | Aditya S [CB.AI.U4AID24104] | SIH25069 |
-| SIH25-A0H-T314 | CogniDevz | Akhil S [CB.SC.U4CSE24105] | SIH25031 |
-| SIH25-A0H-T315 | Jharnav | Priyadharshini S [CB.SC.U4CSE23438] | SIH25032 |
-| SIH25-A0H-T316 | Odin Project | Adithya Rajesh [CB.EN.U4ARE23002] | SIH25047 |
-| SIH25-A0H-T317 | The Lads | Pidaparthi Shanmukha Gautam [CB.SC.U4CSE23044] | SIH25104 |
-| SIH25-A0H-T318 | Uzhaviya | Vignesh V S [CB.EN.U4ECE24159] | SIH25062 |
-| SIH25-A0H-T319 | Greendrive | Sabari Narayanan B K [CB.EN.U4MEE24143] | SIH25097 |
-| SIH25-A0H-T320 | Cirquix | Pavithra M [CB.EN.I4ECE25141] | SIH25063 |
-| SIH25-A0H-T321 | CODE GRABBERS | Sai Asrith Alapati [CB.SC.U4AIE25150] | SIH25135 |
-| SIH25-A0H-T322 | INEARTH | K Nithin [CB.SC.U4AIE24142] | SIH25027 |
-| SIH25-A0H-T323 | SYNERGY | Kolli Sai Praveen Reddy [CB.SC.P2CSE25019] | SIH25126 |
-| SIH25-A0H-T324 | Trixie | Shyam Sundar Raju [CB.SC.U4CSE23049] | SIH25013 |
-| SIH25-A0H-T325 | Code4Cause | Thotakura Srihitha [CB.SC.U4CSE23450] | SIH25031 |
-| SIH25-A0H-T326 | Novaforge | Varun Mahesh Menon [CB.SC.P2AIE25031] | SIH25004 |
-| SIH25-A0H-T327 | Agri | Abhishek K [CB.EN.U4MEE23101] | SIH25097 |
-| SIH25-A0H-T328 | Strikers | Malikireddy Pranavi [CB.AI.U4AID25130] | SIH25041 |
-| SIH25-A0H-T329 | Electranova | P R Thanusri [CB.EN.U4ELC24131] | SIH25063 |
-| SIH25-A0H-T330 | InnovAura | Aradhana Kumar [CB.EN.U4ECE24103] | SIH25061 |
-| SIH25-A0H-T331 | NeoVortex | Vishal Krishnaa R [CB.EN.U4ARE24057] | SIH25036 |
-| SIH25-A0H-T332 | SYNTAX SORCERERS | Thatha Venkata Sadasiva Phanindra Guptha [CB.AI.U4AID25055] | SIH25040 |
-| SIH25-A0H-T333 | ARSEN | Sujithkannan Mahalingam Renuka Devi [CB.EN.U4ARE24049] | SIH25020 |
-| SIH25-A0H-T334 | Bolt force | Vishnu Prasath M [CB.EN.U4MEE25154] | SIH25077 |
-| SIH25-A0H-T335 | Elliot | Sanjay Balaji S [CB.EN.U4ELC25132] | SIH25100 |
-| SIH25-A0H-T336 | Tech Farmers | Rishikesh [CB.SC.U4AIE24365] | SIH25030 |
-| SIH25-A0H-T337 | #Include & Conquer | Motati Ruthvik Reddy [CB.SC.P2AIE25013] | SIH25099 |
-| SIH25-A0H-T338 | Horizon X | Moorthi S P [CB.SC.U4CSE24429] | SIH25031 |
-| SIH25-A0H-T339 | Hacktivists | Vatturu Pardheev [CB.SC.U4AIE23344] | SIH25048 |
-| SIH25-A0H-T340 | FuturEase | Hasrath Ali Umar A [CB.SC.U4CSE24417] | SIH25011 |
-| SIH25-A0H-T341 | Aesthys | Nitin Krishna Vimal Kumar [CB.SC.U4AIE23156] | SIH25099 |
-| SIH25-A0H-T342 | Hackstreet Guys | Devasuthe K [CB.EN.U4ELC25110] | SIH25094 |
-| SIH25-A0H-T343 | Tensor Troops | S.Sajeev [CB.SC.U4AIE23272] | SIH23126 |
-| SIH25-A0H-T344 | The Sixth Sense | Arham Garg [CB.SC.U4CSE24206] | SIH25080 |
-| SIH25-A0H-T345 | MicroBusters | Sanjith Kishore K S [CB.SC.U4CSE25551] | SIH25036 |
-| SIH25-A0H-T346 | Endevors | Varadharajan K [CB.SC.P2AIE25030] | SIH25013 |
-| SIH25-A0H-T347 | Cosmic Coders | Sai Jitesh CK [CB.AI.U4QTS25016] | SIH25002 |
-| SIH25-A0H-T348 | PiXels~ | Meghana Kotharu [CB.SC.U4AIE24232] | SIH25046 |
+| SIH25-A0H-T252 | Velocity Visioners | Samiksha Balamurugan (CB.EN.U4CCE25138) | SIH25100 |
+| SIH25-A0H-T253 | Byte Binders | Roshan S I [CB.AI.U4AAR25042] | SIH25050 |
+| SIH25-A0H-T254 | Internlink | Gudela Roop Siva Kartheek [CB.AI.U4AID24116] | SIH25034 |
+| SIH25-A0H-T255 | TBD | Sunath Reha Sreekumar [CB.AI.U4AIM24146] | SIH25025 |
+| SIH25-A0H-T256 | TEAM ECLIPSE | Pranavi Singamsetty [CB.AI.U4AAR25038] | SIH25028 |
+| SIH25-A0H-T257 | Clean India | Pradosh Gnana Sekar [CB.EN.U4CCE23037] | SIH25046 |
+| SIH25-A0H-T258 | AeroMatrix | Gandham Sai Sumanth [CB.EN.U4MEE24121] | SIH25125 |
+| SIH25-A0H-T259 | The Algorythms | Ganesh K [CB.EN.U4EEE24016] | |
+| SIH25-A0H-T260 | Innovators | Tammurothu Amrutha [CB.SC.U4AIE24255] | |
+| SIH25-A0H-T261 | Kernel Guardians | S Varun Shankar [CB.SC.U4CSE24345] | SIH25017 |
+| SIH25-A0H-T262 | Hexa Core | Dondluru Keerthana [CB.SC.U4AIE24112] | SIH25012 |
+| SIH25-A0H-T263 | MindMesh | Amirthavarshini B [CB.AI.U4AIM24154] | SIH25076 |
+| SIH25-A0H-T264 | Code Crusaders (TBC) | Renee Bhatt [CB.SC.U4CYS24048] | SIH25094 |
+| SIH25-A0H-T265 | HackHexa | Krishanth K [CB.SC.U4CSE24521] | SIH25022 |
+| SIH25-A0H-T266 | Pathify | Sathya Roopan M [CB.SC.U4CSE23256] | SIH25094 |
+| SIH25-A0H-T267 | Estuary | Krithika V [CB.EN.U4CCE23024] | SIH25039 |
+| SIH25-A0H-T268 | Cleopatra Coders | Muppirisetty Bhargavi Sai Hansika [CB.EN.U4ELC24125] | SIH25008 |
+| SIH25-A0H-T269 | 4ARMS | Kowshik V [CB.SC.U4AIE23314] | SIH25083 |
+| SIH25-A0H-T270 | The Kea | Anjana Krishna A [CB.SC.U4CYS25005] | SIH25030 |
+| SIH25-A0H-T271 | Printelligence | Navanith Sampathkumar [CB.EN.U4MEE23158] | SIH25095 |
+| SIH25-A0H-T272 | DeepBlue | Siva Sashreek R [CB.AI.U4AID24054] | |
+| SIH25-A0H-T273 | SoulSync | Anwita Subbiah Velayutham [CB.SC.U4CYS23003] | SIH25092 |
+| SIH25-A0H-T274 | HEXAFORCE | Vaisakhi.S.Chandran [CB.EN.U4EEE24050] | SIH25079 |
+| SIH25-A0H-T275 | CodeIt | D S Yazhini [CB.EN.U4ECE25008] | SIH25077 |
+| SIH25-A0H-T276 | TBC | Puvidhan M V [CB.EN.U4MEE24034] | SIH25047 |
+| SIH25-A0H-T277 | TBC | S Pooja Shree [CB.SC.U4CSE23346] | SIH25126 |
+| SIH25-A0H-T278 | Debug Divas | Pooja N [CB.SC.U4AIE24242] | SIH25071 |
+| SIH25-A0H-T279 | RoamX | Sahana R [CB.AI.U4AIM24037] | SIH25082 |
+| SIH25-A0H-T280 | Team Alpha | A Mohan Siddhartha Reddy [CB.EN.U4ELC24003] | SIH25014 |
+| SIH25-A0H-T281 | Vyomear | Umaa Maheswaran V [CB.EN.U4ECE22260] | SIH25117 |
+| SIH25-A0H-T282 | Acqua Guardians | Varunesh Anandan [CB.EN.U4EEE22153] | SIH25036 |
+| SIH25-A0H-T283 | Credora | Mithuraa Senthilkumar [CB.SC.U4CSE24527] | SIH25038 |
+| SIH25-A0H-T284 | Hackflare | Giridharan R [CB.SC.U4CSE25119] | SIH25094 |
+| SIH25-A0H-T285 | Nexus Cartel | Zahwa K [CB.SC.U4AIE24261] | SIH25083 |
+| SIH25-A0H-T286 | ResQ Wings | S Ajeth [CB.SC.U4CSE23142] | SIH25047 |
+| SIH25-A0H-T287 | Hackaholics (TBC) | Advik Gautam [CB.SC.U4CYS25104] | SIH25076 |
+| SIH25-A0H-T288 | SYN6 | Adithya Menon R [CB.SC.U4CSE23506] | SIH25080 |
+| SIH25-A0H-T289 | Fuse force | Priyaranjan S J [CB.EN.U4EEE23024] | SIH25054 |
+| SIH25-A0H-T290 | Haul | Vendra Punith Sai [CB.SC.U4CSE23768] | SIH25137 |
+| SIH25-A0H-T291 | Hacura | Shahana G [CB.EN.U4ELC25036] | SIH25098 |
+| SIH25-A0H-T292 | SIKHYA JAGRITI | Kamalesh [CB.EN.U4MEE23023] | SIH25019 |
+| SIH25-A0H-T293 | Eshwar | Latha E [CB.PS.I5DAS22030] | SIH25118 |
+| SIH25-A0H-T294 | Baymax 2.0 | Vijay Santhosh P [CB.SC.U4AIE23157] | SIH25024 |
+| SIH25-A0H-T295 | Internova | Varada Srikrishnan [CB.PS.I5DAS23112] | SIH25034 |
+| SIH25-A0H-T296 | Microbusterz | Kishor Kumar [CB.EN.U4ARE24019] | SIH25036 |
+| SIH25-A0H-T297 | Built2Solve | Ranjith Raja B [CB.SC.U4AIE24250] | SIH25050 |
+| SIH25-A0H-T298 | AlgoWavez | Aadhil Ahamed A [CB.EN.U4ECE25201] | SIH25016 |
+| SIH25-A0H-T299 | TechTonic (TBC) | T Saumiya [CB.SC.U4CSE24651] | SIH25138 |
+| SIH25-A0H-T300 | Byte Busters (TBC) | B Barath Kumar [CB.EN.U4CCE24107] | SIH25109 |
+| SIH25-A0H-T301 | HackforeX | Gayathri Binu [CB.EN.U4ECE25213] | SIH25082 |
+| SIH25-A0H-T302 | Hardwired Solutions | Nabinath S [CB.EN.U4EEE24028] | SIH25020 |
+| SIH25-A0H-T303 | UnBrokenChain | Varun Raj V [CB.SC.U4CSE23556] | SIH25045 |
+| SIH25-A0H-T304 | VanGuards | Raghav N [CB.SC.U4AIE23059] | SIH12508 |
+| SIH25-A0H-T305 | BhoomiBotics | Mernidi Sai Vital Ashish [CB.EN.U4MEE24158] | SIH25109 |
+| SIH25-A0H-T306 | Chitti Chitti Robo | Yashas Senthil Kumar [CB.SC.U4CSE25464] | SIH25071 |
+| SIH25-A0H-T307 | InnovIndians | Illindala Karthik Saiharsh [CB.SC.U4CSE23325] | SIH25031 |
+| SIH25-A0H-T308 | Safe Line | Akshath Senthilkumar [CB.EN.U4ELC23003] | SIH25079 |
+| SIH25-A0H-T309 | Hexagram | A K Karthik [CB.EN.U4ELC24001] | SIH25100 |
+| SIH25-A0H-T310 | Akatsuki | Shrijith S [CB.EN.U4ELC25136] | SIH25095 |
+| SIH25-A0H-T311 | AI OnTrack | Rohith V [CB.AI.U4AID24144] | SIH25022 |
+| SIH25-A0H-T312 | Confluence | Pattem Hemanth Kumar Reddy [CB.SC.U4CSE23763] | SIH25031 |
+| SIH25-A0H-T313 | Logikon | Swarna Dharshini S [CB.SC.P2CSE25036] | SIH25092 |
+| SIH25-A0H-T314 | The One | Aditya S [CB.AI.U4AID24104] | SIH25069 |
+| SIH25-A0H-T315 | CogniDevz | Akhil S [CB.SC.U4CSE24105] | SIH25031 |
+| SIH25-A0H-T316 | Jharnav | Priyadharshini S [CB.SC.U4CSE23438] | SIH25032 |
+| SIH25-A0H-T317 | Odin Project | Adithya Rajesh [CB.EN.U4ARE23002] | SIH25047 |
+| SIH25-A0H-T318 | The Lads | Pidaparthi Shanmukha Gautam [CB.SC.U4CSE23044] | SIH25104 |
+| SIH25-A0H-T319 | Uzhaviya | Vignesh V S [CB.EN.U4ECE24159] | SIH25062 |
+| SIH25-A0H-T320 | Greendrive | Sabari Narayanan B K [CB.EN.U4MEE24143] | SIH25097 |
+| SIH25-A0H-T321 | Cirquix | Pavithra M [CB.EN.I4ECE25141] | SIH25063 |
+| SIH25-A0H-T322 | CODE GRABBERS | Sai Asrith Alapati [CB.SC.U4AIE25150] | SIH25135 |
+| SIH25-A0H-T323 | INEARTH | K Nithin [CB.SC.U4AIE24142] | SIH25027 |
+| SIH25-A0H-T324 | SYNERGY | Kolli Sai Praveen Reddy [CB.SC.P2CSE25019] | SIH25126 |
+| SIH25-A0H-T325 | Trixie | Shyam Sundar Raju [CB.SC.U4CSE23049] | SIH25013 |
+| SIH25-A0H-T326 | Code4Cause | Thotakura Srihitha [CB.SC.U4CSE23450] | SIH25031 |
+| SIH25-A0H-T327 | Novaforge | Varun Mahesh Menon [CB.SC.P2AIE25031] | SIH25004 |
+| SIH25-A0H-T328 | Agri | Abhishek K [CB.EN.U4MEE23101] | SIH25097 |
+| SIH25-A0H-T329 | Strikers | Malikireddy Pranavi [CB.AI.U4AID25130] | SIH25041 |
+| SIH25-A0H-T330 | Electranova | P R Thanusri [CB.EN.U4ELC24131] | SIH25063 |
+| SIH25-A0H-T331 | InnovAura | Aradhana Kumar [CB.EN.U4ECE24103] | SIH25061 |
+| SIH25-A0H-T332 | NeoVortex | Vishal Krishnaa R [CB.EN.U4ARE24057] | SIH25036 |
+| SIH25-A0H-T333 | SYNTAX SORCERERS | Thatha Venkata Sadasiva Phanindra Guptha [CB.AI.U4AID25055] | SIH25040 |
+| SIH25-A0H-T334 | ARSEN | Sujithkannan Mahalingam Renuka Devi [CB.EN.U4ARE24049] | SIH25020 |
+| SIH25-A0H-T335 | Bolt force | Vishnu Prasath M [CB.EN.U4MEE25154] | SIH25077 |
+| SIH25-A0H-T336 | Elliot | Sanjay Balaji S [CB.EN.U4ELC25132] | SIH25100 |
+| SIH25-A0H-T337 | Tech Farmers | Rishikesh [CB.SC.U4AIE24365] | SIH25030 |
+| SIH25-A0H-T338 | #Include & Conquer | Motati Ruthvik Reddy [CB.SC.P2AIE25013] | SIH25099 |
+| SIH25-A0H-T339 | Horizon X | Moorthi S P [CB.SC.U4CSE24429] | SIH25031 |
+| SIH25-A0H-T340 | Hacktivists | Vatturu Pardheev [CB.SC.U4AIE23344] | SIH25048 |
+| SIH25-A0H-T341 | FuturEase | Hasrath Ali Umar A [CB.SC.U4CSE24417] | SIH25011 |
+| SIH25-A0H-T342 | Aesthys | Nitin Krishna Vimal Kumar [CB.SC.U4AIE23156] | SIH25099 |
+| SIH25-A0H-T343 | Hackstreet Guys | Devasuthe K [CB.EN.U4ELC25110] | SIH25094 |
+| SIH25-A0H-T344 | Tensor Troops | S.Sajeev [CB.SC.U4AIE23272] | SIH23126 |
+| SIH25-A0H-T345 | The Sixth Sense | Arham Garg [CB.SC.U4CSE24206] | SIH25080 |
+| SIH25-A0H-T346 | MicroBusters | Sanjith Kishore K S [CB.SC.U4CSE25551] | SIH25036 |
+| SIH25-A0H-T347 | Endevors | Varadharajan K [CB.SC.P2AIE25030] | SIH25013 |
+| SIH25-A0H-T348 | Cosmic Coders | Sai Jitesh CK [CB.AI.U4QTS25016] | SIH25002 |
+| SIH25-A0H-T349 | PiXels~ | Meghana Kotharu [CB.SC.U4AIE24232] | SIH25046 |
+
 
 
 
