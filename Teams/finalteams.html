@@ -3654,6 +3654,10 @@ Updated Date: 21st Sept 2025
    <div style="width:260px; max-width:45%; min-width:200px;">
     <canvas id="deptChart"></canvas>
   </div>
+  <div style="width:260px; max-width:45%; min-width:200px;">
+    <canvas id="mentorChart"></canvas>
+  </div>
+        
 </div>
 
 <script>
@@ -3775,7 +3779,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function getDepartmentFromRoll(roll) {
     if (!roll) return null;
     roll = roll.toUpperCase();
-    let match = roll.match(/U\d([A-Z]{2,4})\d+/); // extract dept code like MEE, ECE, AIE
+    let match = roll.match(/U\d([A-Z]{2,4})\d+/);
     if (match) return match[1];
     return null;
   }
@@ -3847,8 +3851,47 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('deptChart').style.height = '250px';
   } catch (e) { console.error('deptChart error', e); }
 
+  // --- Mentor Distribution ---
+  const mentorCounts = {};
+  rows.forEach(row => {
+    const tds = Array.from(row.querySelectorAll('td'));
+    const mentor = (tds[tds.length - 1]?.textContent || "Unknown").trim();
+    mentorCounts[mentor] = (mentorCounts[mentor] || 0) + 1;
+  });
+
+  const mentorLabels = Object.keys(mentorCounts);
+  const mentorData = Object.values(mentorCounts);
+  const mentorColors = mentorLabels.map((_,i) => 'hsl(' + Math.round(i * (360/Math.max(1, mentorLabels.length))) + ' 70% 50%)');
+
+  try {
+    const ctx4 = document.getElementById('mentorChart').getContext('2d');
+    new Chart(ctx4, {
+      type: 'doughnut',
+      data: {
+        labels: mentorLabels,
+        datasets: [{
+          data: mentorData,
+          backgroundColor: mentorColors,
+          borderColor: '#ffffff',
+          borderWidth: 1,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: { display: true, text: 'Teams by Mentor' }
+        }
+      }
+    });
+    document.getElementById('mentorChart').style.height = '250px';
+  } catch (e) { console.error('mentorChart error', e); }
+
 });
 </script>
+
 
 <br/>        
 <div style="text-align: center;">
