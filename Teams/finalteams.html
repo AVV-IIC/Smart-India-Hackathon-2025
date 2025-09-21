@@ -3670,13 +3670,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const ths = Array.from(document.querySelectorAll('table thead th'));
   const headerTexts = ths.map(th => (th.textContent || '').trim().toUpperCase());
 
-  // find PS index
   let psIndex = headerTexts.findIndex(t => t.includes('PS') || t.includes('PROBLEM') || t.includes('PS #'));
   if (psIndex === -1) psIndex = headerTexts.findIndex(t => /PS/.test(t));
 
-  // find leader column index
   let leaderIndex = headerTexts.findIndex(t => t.includes('LEADER'));
-  if (leaderIndex === -1) leaderIndex = 2; // fallback
+  if (leaderIndex === -1) leaderIndex = 2;
 
   const startMember = Math.max(leaderIndex + 1, 2);
   const endMember = (psIndex !== -1) ? psIndex : (ths.length - 2);
@@ -3701,6 +3699,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else teamTypes['Unclassified']++;
   });
 
+  // --- Draw Team Composition Chart ---
   try {
     const ctx = document.getElementById('teamChart').getContext('2d');
     new Chart(ctx, {
@@ -3774,17 +3773,26 @@ document.addEventListener('DOMContentLoaded', function() {
   } catch (e) { console.error('psChart error', e); }
 
   // --- Department Distribution ---
-  function getDepartment(code) {
-    code = code.toUpperCase();
-    if (["AEL", "CCE", "ECE"].some(prefix => code.includes(prefix))) return "ECE";
-    if (["ELC", "EEE"].some(prefix => code.includes(prefix))) return "EEE";
-    if (code.includes("CSE")) return "School of Computing";
-    if (code.includes("CYS")) return "Cyber Security";
-    if (["ARE", "MEE"].some(prefix => code.includes(prefix))) return "Mechanical";
-    if (code.includes("AEE")) return "Aerospace";
-    if (["AAR","AIM","AID","AIE","CPS","QTS"].some(prefix => code.includes(prefix))) return "School of AI";
-    if (code.includes("CHE")) return "Chemical";
-    if (code.includes("I5DAS")) return "Integrated";
+  function getDepartmentFromRoll(roll) {
+    if (!roll) return null;
+    roll = roll.toUpperCase();
+    // extract middle 3-4 letters like MEE, EEE, CSE, AIE, etc.
+    let match = roll.match(/U\d([A-Z]{2,4})\d+/);
+    if (match) return match[1];
+    return null;
+  }
+
+  function mapDept(code) {
+    if (!code) return null;
+    if (["AEL","CCE","ECE"].includes(code)) return "ECE";
+    if (["ELC","EEE"].includes(code)) return "EEE";
+    if (code === "CSE") return "School of Computing";
+    if (code === "CYS") return "Cyber Security";
+    if (["ARE","MEE"].includes(code)) return "Mechanical";
+    if (code === "AEE") return "Aerospace";
+    if (["AAR","AIM","AID","AIE","CPS","QTS"].includes(code)) return "School of AI";
+    if (code === "CHE") return "Chemical";
+    if (code === "I5DAS") return "Integrated";
     return null;
   }
 
@@ -3792,21 +3800,23 @@ document.addEventListener('DOMContentLoaded', function() {
   rows.forEach(row => {
     const tds = Array.from(row.querySelectorAll('td'));
     const memberCells = tds.slice(startMember, (psIndex !== -1) ? psIndex : (tds.length - 2));
-    let members = [];
+    let depts = [];
     memberCells.forEach(td => {
       let text = td.textContent || "";
-      let match = text.match(/\[(.*?)\]/);
-      if (match) members.push(match[1]);
+      let rollMatch = text.match(/\[(.*?)\]/);
+      if (rollMatch) {
+        let roll = rollMatch[1];
+        let deptCode = getDepartmentFromRoll(roll);
+        let mapped = mapDept(deptCode);
+        if (mapped) depts.push(mapped);
+      }
     });
 
-    let departments = members.map(m => getDepartment(m || "")).filter(Boolean);
-    let uniqueDepts = [...new Set(departments)];
-
+    let unique = [...new Set(depts)];
     let teamDept = "Mixed";
-    if (uniqueDepts.length === 1 && members.length === 6) {
-      teamDept = uniqueDepts[0];
+    if (unique.length === 1 && depts.length === 6) {
+      teamDept = unique[0];
     }
-
     deptCounts[teamDept] = (deptCounts[teamDept] || 0) + 1;
   });
 
