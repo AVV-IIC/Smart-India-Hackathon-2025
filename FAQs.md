@@ -54,7 +54,7 @@ Submission link will posted via <a href="https://chat.whatsapp.com/HGMElprUqBMFh
 <summary><b>Q: When is the Internal Hackathon Scheduled?</b></summary>
 <p>
 <br/>
-A: Tentatively <b>22nd to 24th Sept, 2025</b>.  
+A: <b>22nd to 24th Sept, 2025</b>.  
 Check our <a href="https://www.instagram.com/sih.amrita/p/DOwLShwgRA1/">Instagram</a>.
 </p>
 </details>
@@ -117,10 +117,19 @@ A:   <ul>
 </details>
 <br/>
 <details>
+<summary><b>Q: Schedule for Internal Hackathon Panel-wise?</b></summary>
+<p>
+<br/>
+A: <a href="https://avv-iic.github.io/Smart-India-Hackathon-2025/Teams">Panel-wise Schedule</a>
+</p>
+</details>
+<br/>
+<details>
 <summary><b>Q: How many teams will get selected from the Internal Hackathon to next Level/Round?</b></summary>
 <p>
 <br/>
-A: <b>45 Top Teams + 05 Waitlisted Team</b> (50 Teams) will be nominated by the SPOC via the SIH Portal.
+A: A max of <b>50 teams (45 Shortlisted + 05 Waitlisted) per college</b> and in case of <b>university 100 Teams</b> can be nominated (including Problem
+statement based/Student innovation category)
 </p>
 </details>
 
