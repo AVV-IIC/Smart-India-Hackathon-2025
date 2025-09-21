@@ -105,7 +105,14 @@ A: No, a fully developed prototype is <b>not mandatory</b> for the Internal Hack
 <summary><b>Q: What will be the evaluation rubrics?</b></summary>
 <p>
 <br/>
-A: TBD
+A:   <ul>
+    <li>Relevance to Problem Statement</li>
+    <li>Innovation &amp; Uniqueness</li>
+    <li>Technical Complexity &amp; Depth</li>
+    <li>Feasibility &amp; Implementation Plan</li>
+    <li>Impact &amp; Benefits</li>
+    <li>Teamwork &amp; Presentation</li>
+   </ul>
 </p>
 </details>
 <br/>
