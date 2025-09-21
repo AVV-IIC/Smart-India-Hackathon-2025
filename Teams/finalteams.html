@@ -3699,7 +3699,6 @@ document.addEventListener('DOMContentLoaded', function() {
     else teamTypes['Unclassified']++;
   });
 
-  // --- Draw Team Composition Chart ---
   try {
     const ctx = document.getElementById('teamChart').getContext('2d');
     new Chart(ctx, {
@@ -3776,8 +3775,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function getDepartmentFromRoll(roll) {
     if (!roll) return null;
     roll = roll.toUpperCase();
-    // extract middle 3-4 letters like MEE, EEE, CSE, AIE, etc.
-    let match = roll.match(/U\d([A-Z]{2,4})\d+/);
+    let match = roll.match(/U\d([A-Z]{2,4})\d+/); // extract dept code like MEE, ECE, AIE
     if (match) return match[1];
     return null;
   }
@@ -3823,27 +3821,30 @@ document.addEventListener('DOMContentLoaded', function() {
   try {
     const ctx3 = document.getElementById('deptChart').getContext('2d');
     new Chart(ctx3, {
-      type: 'bar',
+      type: 'doughnut',
       data: {
         labels: Object.keys(deptCounts),
         datasets: [{
-          label: 'Teams per Department',
           data: Object.values(deptCounts),
           backgroundColor: [
             '#4285F4','#DB4437','#F4B400','#0F9D58','#AB47BC',
             '#00ACC1','#FF7043','#9E9D24','#5C6BC0','#00897B'
-          ]
+          ],
+          borderColor: '#ffffff',
+          borderWidth: 1,
+          hoverOffset: 8
         }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
-          legend: { display: false },
+          legend: { position: 'bottom' },
           title: { display: true, text: 'Teams by Department' }
         }
       }
     });
-    document.getElementById('deptChart').style.height = '300px';
+    document.getElementById('deptChart').style.height = '250px';
   } catch (e) { console.error('deptChart error', e); }
 
 });
