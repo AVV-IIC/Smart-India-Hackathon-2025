@@ -3651,6 +3651,9 @@ Updated Date: 21st Sept 2025
   <div style="width:260px; max-width:45%; min-width:200px;">
     <canvas id="psChart"></canvas>
   </div>
+   <div style="width:260px; max-width:45%; min-width:200px;">
+    <canvas id="deptChart"></canvas>
+  </div>
 </div>
 
 <script>
@@ -3666,15 +3669,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const ths = Array.from(document.querySelectorAll('table thead th'));
   const headerTexts = ths.map(th => (th.textContent || '').trim().toUpperCase());
+
+  // find PS index
   let psIndex = headerTexts.findIndex(t => t.includes('PS') || t.includes('PROBLEM') || t.includes('PS #'));
   if (psIndex === -1) psIndex = headerTexts.findIndex(t => /PS/.test(t));
+
+  // find leader column index
   let leaderIndex = headerTexts.findIndex(t => t.includes('LEADER'));
-  if (leaderIndex === -1) leaderIndex = 2;
+  if (leaderIndex === -1) leaderIndex = 2; // fallback
 
   const startMember = Math.max(leaderIndex + 1, 2);
   const endMember = (psIndex !== -1) ? psIndex : (ths.length - 2);
 
   const rows = Array.from(document.querySelectorAll('table tbody tr'));
+
+  // --- Team Composition ---
   const teamTypes = { 'UG Only':0, 'PG Only':0, 'Mixed':0, 'Unclassified':0 };
 
   rows.forEach(row => {
@@ -3718,7 +3727,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('teamChart').style.height = '220px';
   } catch (e) { console.error('teamChart error', e); }
 
-  // --- Problem Statement counts ---
+  // --- Problem Statement Distribution ---
   const psCounts = {};
   rows.forEach(row => {
     const tds = Array.from(row.querySelectorAll('td'));
@@ -3764,7 +3773,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('psChart').style.height = '220px';
   } catch (e) { console.error('psChart error', e); }
 
-  // --- Department Classification ---
+  // --- Department Distribution ---
   function getDepartment(code) {
     code = code.toUpperCase();
     if (["AEL", "CCE", "ECE"].some(prefix => code.includes(prefix))) return "ECE";
@@ -3824,10 +3833,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+    document.getElementById('deptChart').style.height = '300px';
   } catch (e) { console.error('deptChart error', e); }
 
 });
 </script>
+
 
 <br/>        
 <div style="text-align: center;">
