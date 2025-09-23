@@ -66,8 +66,12 @@ Updated Date: 21st Sept 2025
             padding: 2px 4px;
             border-radius: 4px;
         }
-
-
+        .deadline-missed {
+            background-color: #800080; /* purple */
+            color: #FFFFFF;           /* white text for contrast */
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -165,13 +169,13 @@ Updated Date: 21st Sept 2025
                     <td>9</td>
                     <td>12:15 PM - 12:30 PM</td>
                     <td>SIH25-A0H-T214</td>
-                    <td>Trailblazers </td>
+                    <td>Trailblazers <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td>12:30 PM - 12:45 PM</td>
                     <td>SIH25-A0H-T222</td>
-                    <td>Tourist Shield </td>
+                    <td>Tourist Shield <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>11</td>
@@ -257,20 +261,20 @@ Updated Date: 21st Sept 2025
                     <td>6</td>
                     <td>11:15 AM - 11:30 AM</td>
                     <td>SIH25-A0H-T101</td>
-                    <td>AyurMarg</td>
+                    <td>AyurMarg <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>7</td>
                     <td>11:30 AM - 11:45 AM</td>
                     <td>SIH25-A0H-T323</td>
-                    <td>INEARTH</td>
+                    <td>INEARTH <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>11:45 AM - 12:00 PM</td>
                     <td rowspan="3" class="problem-cell">SIH25045 - Blockchain-Based Supply Chain Transparency for Agricultural Produce</td>
                     <td>SIH25-A0H-T200</td>
-                    <td>TechNovus</td>
+                    <td>TechNovus <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>9</td>
@@ -378,14 +382,14 @@ Updated Date: 21st Sept 2025
                     <td>7</td>
                     <td>11:45 AM - 12:00 AM</td>
                     <td>SIH25-A0H-T213</td>
-                    <td>HYDRONAUTS <br/><span class="highlightc">Completed</span></td>
+                    <td>HYDRONAUTS</td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>2:00 PM - 2:15 PM</td>
                     <td rowspan="5" class="problem-cell">SIH25004 - lmage based breed recognition for cattle and buffaloes of India</td>
                     <td>SIH25-A0H-T007</td>
-                    <td>Tech Titans</td>
+                    <td>Tech Titans <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>9</td>
@@ -507,13 +511,13 @@ Updated Date: 21st Sept 2025
                     <td>9</td>
                     <td>2:15 PM - 2:30 PM</td>
                     <td>SIH25-A0H-T336</td>
-                    <td>Elliot</td>
+                    <td>Elliot <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td>2:45 PM - 3:00 PM</td>
                     <td>SIH25-A0H-T337</td>
-                    <td>Tech Farmers</td>
+                    <td>Tech Farmers <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>11</td>
@@ -584,7 +588,7 @@ Updated Date: 21st Sept 2025
                     <td>2</td>
                     <td>2:00 PM - 2:15 PM</td>
                     <td>SIH25-A0H-T350</td>
-                    <td>Impossible Mission Force </td>
+                    <td>Impossible Mission Force <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -610,7 +614,7 @@ Updated Date: 21st Sept 2025
                     <td>6</td>
                     <td>3:15 PM - 3:30 PM</td>
                     <td>SIH25-A0H-T088</td>
-                    <td>Innovators Hub</td>
+                    <td>Innovators Hub <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>7</td>
@@ -636,6 +640,19 @@ Updated Date: 21st Sept 2025
                     <td>4:30 PM - 4:45 PM</td>
                     <td>SIH25-A0H-T174</td>
                     <td>Hackleets <br/><span class="highlightc">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td></td>
+                    <td rowspan="2" class="problem-cell">SIH25094 -One-Stop Personalized Career & Education Advisor</td>
+                    <td>SIH25-A0H-T181</td>
+                    <td>ZeroDay <br/><span class="highlightc">Completed</span></td>
+                </tr>
+                 <tr>
+                    <td>12</td>
+                    <td></td>
+                    <td>SIH25-A0H-T026</td>
+                    <td>Visioneers <br/><span class="highlightc">Completed</span></td>
                 </tr>
             </tbody>
         </table>
@@ -710,19 +727,6 @@ Updated Date: 21st Sept 2025
                     <td>SIH25-A0H-T125</td>
                     <td>Automation Avengers</td>
                 </tr>
-                <tr>
-                    <td>10</td>
-                    <td></td>
-                    <td rowspan="2" class="problem-cell">SIH25094 -One-Stop Personalized Career & Education Advisor</td>
-                    <td>SIH25-A0H-T181</td>
-                    <td>ZeroDay <br/><span class="highlightc">Completed</span></td>
-                </tr>
-                 <tr>
-                    <td>11</td>
-                    <td></td>
-                    <td>SIH25-A0H-T026</td>
-                    <td>Visioneers <br/><span class="highlightc">Completed</span></td>
-                </tr>
             </tbody>
         </table>
     </div>
@@ -755,7 +759,7 @@ Updated Date: 21st Sept 2025
                     <td>2</td>
                     <td>10:30 AM - 10:45 AM</td>
                     <td>SIH25-A0H-T244</td>
-                    <td>Hacko</td>
+                    <td>Hacko <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -792,13 +796,13 @@ Updated Date: 21st Sept 2025
                     <td>8</td>
                     <td>12:00 PM - 12:15 PM</td>
                     <td>SIH25-A0H-T318</td>
-                    <td>The Lads</td>
+                    <td>The Lads <br/><span class="deadline-missed">Deadline Missed</span></td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td>12:15 PM - 12:30 PM</td>
                     <td>SIH25-A0H-T354</td>
-                    <td>Code Buddies</td>
+                    <td>Code Buddies <br/><span class="not-reported">Not Reported</span></td>
                 <tr>
                 </tr>
                 <td>10</td>
