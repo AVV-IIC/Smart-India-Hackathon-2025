@@ -3,3 +3,416 @@ Authors: Mr. Ramaguru Radhakrishnan
 Created Date: 25th Sept 2025 
 Updated Date: 25st Sept 2025
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIH 2025 - Participated Teams</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f9fc;
+            
+            color: #333;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgb(228, 245, 255);
+            padding: 30px 40px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: darkblue;
+            margin-bottom: 30px;
+            font-weight: 600;
+            padding: 12px;
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black; 
+        }
+        .dropdown-container {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        select:disabled {
+            background-color: #f4f4f4;
+            cursor: not-allowed;
+        }
+        select:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+        #teamsResult {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f7f9fc;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        h2 {
+            color: #1a73e8;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        li:hover {
+            background-color: khaki;
+            transform: translateY(-2px);   
+        }
+        li strong {
+            color: #333;
+        }
+        li span {
+            color: green;
+            font-weight: bold;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: large;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <img alt="header" src="./header.png" width="1200">
+    </p>
+
+<div class="container">
+    
+    <h1>SIH 2025 Internal Hackathon</h1>
+    
+    <div class="dropdown-container">
+        <label for="categorySelect">1. Choose a Category:</label>
+        <select id="categorySelect">
+            <option value="">-- Select Category --</option>
+            <option value="Software">Software</option>
+            <option value="Hardware">Hardware</option>
+        </select>
+    </div>
+
+    <div class="dropdown-container">
+        <label for="themeSelect">2. Choose a Theme:</label>
+        <select id="themeSelect" disabled>
+            <option value="">-- Select Theme --</option>
+        </select>
+    </div>
+
+    <div class="dropdown-container">
+        <label for="problemSelect">3. Choose a Problem Statement:</label>
+        <select id="problemSelect" disabled>
+            <option value="">-- Select Problem Statement --</option>
+        </select>
+    </div>
+
+    <div id="teamsResult" style="display: none;">
+        <h2>Completed Teams</h2>
+        <ul id="teamsList"></ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; SIH 2025, Institution's Innovation Council (IIC) 8.0, Amrita Vishwa Vidyapeetham, Coimbatore. </p>
+</footer>
+
+<script>
+const completedTeamsData = {
+    'SIH25002': [ { id: 'SIH25-A0H-T012', name: 'Perspicacious Sapiens' }, { id: 'SIH25-A0H-T240', name: 'WhichRoot' }, { id: 'SIH25-A0H-T078', name: 'Charisma' }, { id: 'SIH25-A0H-T087', name: 'Formula X' }, { id: 'SIH25-A0H-T166', name: 'Nova Fusion' }, { id: 'SIH25-A0H-T168', name: 'CodeScarab' }, { id: 'SIH25-A0H-T050', name: 'HackOps' }, { id: 'SIH25-A0H-T348', name: 'Cosmic Coders' } ],
+    'SIH25038': [ { id: 'SIH25-A0H-T003', name: '404' }, { id: 'SIH25-A0H-T024', name: 'Apex' }, { id: 'SIH25-A0H-T283', name: 'Credora' } ],
+    'SIH25029': [ { id: 'SIH25-A0H-T047', name: 'Blockchain Battalion' }, { id: 'SIH25-A0H-T110', name: 'Sternritters' }, { id: 'SIH25-A0H-T130', name: 'Root Force' }, { id: 'SIH25-A0H-T138', name: 'Digital Innovators' } ],
+    'SIH25027': [ { id: 'SIH25-A0H-T081', name: 'HexaBits' } ],
+    'SIH25045': [ { id: 'SIH25-A0H-T231', name: 'Solace' }, { id: 'SIH25-A0H-T303', name: 'UnBrokenChain' } ],
+    'SIH25013': [ { id: 'SIH25-A0H-T062', name: 'Overlychalant' }, { id: 'SIH25-A0H-T215', name: 'Hackersprint' }, { id: 'SIH25-A0H-T325', name: 'Trixie' }, { id: 'SIH25-A0H-T347', name: 'Endevors' } ],
+    'SIH12508': [ { id: 'SIH25-A0H-T304', name: 'VanGuards' }, { id: 'SIH25-A0H-T034', name: 'Code Blooded' } ],
+    'SIH25040': [ { id: 'SIH25-A0H-T020', name: 'Smart Hive' }, { id: 'SIH25-A0H-T096', name: 'ODYSSEY' }, { id: 'SIH25-A0H-T103', name: 'Poseinet' }, { id: 'SIH25-A0H-T113', name: 'Aquanauts' } ],
+    'SIH25004': [ { id: 'SIH25-A0H-T055', name: 'Bovi-Tech' }, { id: 'SIH25-A0H-T066', name: 'VdF5n' }, { id: 'SIH25-A0H-T150', name: 'Innoverse' }, { id: 'SIH25-A0H-T327', name: 'NovaForge' } ],
+    'SIH25074': [ { id: 'SIH25-A0H-T179', name: 'Build-It' }, { id: 'SIH25-A0H-T315', name: 'CogniDevz' } ],
+    'SIH25069': [ { id: 'SIH25-A0H-T129', name: '200_OK' }, { id: 'SIH25-A0H-T314', name: 'The One' } ],
+    'SIH25049': [ { id: 'SIH25-A0H-T123', name: 'Hustle Squad' }, { id: 'SIH25-A0H-T057', name: 'Aegis Nexus' }, { id: 'SIH25-A0H-T191', name: 'DataDynamos' }, { id: 'SIH25-A0H-T246', name: 'Brute Force' }, { id: 'SIH25-A0H-T199', name: 'CTRL+GLITCH' }, { id: 'SIH25-A0H-T099', name: 'MediCode' } ],
+    'SIH25030': [ { id: 'SIH25-A0H-T056', name: 'Agrizen' }, { id: 'SIH25-A0H-T218', name: 'Nexus Navigators' }, { id: 'SIH25-A0H-T352', name: 'Farmage' } ],
+    'SIH25076': [ { id: 'SIH25-A0H-T188', name: 'Farmsight' }, { id: 'SIH25-A0H-T228', name: 'ECOTRONIX' }, { id: 'SIH25-A0H-T263', name: 'MindMesh' }, { id: 'SIH25-A0H-T287', name: 'XORcerers' } ],
+    'SIH25094': [ { id: 'SIH25-A0H-T266', name: 'Pathify' }, { id: 'SIH25-A0H-T181', name: 'ZeroDay' }, { id: 'SIH25-A0H-T026', name: 'Visioneers' } ],
+    'SIH25033': [ { id: 'SIH25-A0H-T013', name: 'rkive' } ],
+    'SIH25066': [ { id: 'SIH25-A0H-T183', name: 'Glitch Squad' }, { id: 'SIH25-A0H-T192', name: 'BitBenders' } ],
+    'SIH25041': [ { id: 'SIH25-A0H-T080', name: 'Mission Ctrl' }, { id: 'SIH25-A0H-T118', name: 'Paradoxx' } ],
+    'SIH25073': [ { id: 'SIH25-A0H-T051', name: 'Level Devil' }, { id: 'SIH25-A0H-T098', name: 'Codeezy' }, { id: 'SIH25-A0H-T174', name: 'Hackleets' } ],
+    'SIH25044': [ { id: 'SIH25-A0H-T312', name: 'Confluence' }, { id: 'SIH25-A0H-T171', name: 'DataCrew' }, { id: 'SIH25-A0H-T017', name: 'CropCoders' } ],
+    'SIH25099': [ { id: 'SIH25-A0H-T036', name: 'Code Sapiens' }, { id: 'SIH25-A0H-T049', name: 'Spectrons' }, { id: 'SIH25-A0H-T077', name: 'Silver Arrows' } ],
+    'SIH25075': [ { id: 'SIH25-A0H-T125', name: 'Automation Avengers' } ],
+    'SIH25034': [ { id: 'SIH25-A0H-T035', name: 'Byte of Intelligence' }, { id: 'SIH25-A0H-T250', name: 'Savyans' }, { id: 'SIH25-A0H-T254', name: 'Internlink' }, { id: 'SIH25-A0H-T295', name: 'Internova' } ],
+    'SIH25104': [ { id: 'SIH25-A0H-T071', name: 'Works On My Machine' }, { id: 'SIH25-A0H-T233', name: 'THE SMART MATRIX' } ],
+    'SIH25102': [ { id: 'SIH25-A0H-T264', name: 'Quantum Coders' } ],
+    'SIH25081': [ { id: 'SIH25-A0H-T180', name: 'BrainChain' }, { id: 'SIH25-A0H-T217', name: 'Newgate' } ],
+    'SIH25091': [ { id: 'SIH25-A0H-T028', name: 'IDEON' }, { id: 'SIH25-A0H-T030', name: 'Techsparkles' }, { id: 'SIH25-A0H-T040', name: 'Techie Tacos' }, { id: 'SIH25-HD-T002', name: 'Heretics' } ],
+    'SIH25071': [ { id: 'SIH25-A0H-T170', name: '404 NOT FOUND' }, { id: 'SIH25-A0H-T306', name: 'Chitti Chitti Robo' } ],
+    'SIH25022': [ { id: 'SIH25-A0H-T265', name: 'HackHexa' }, { id: 'SIH25-A0H-T005', name: 'Bit by Bit' }, { id: 'SIH25-A0H-T014', name: 'Code4Change' }, { id: 'SIH25-A0H-T022', name: 'Phantom Coders' }, { id: 'SIH25-A0H-T023', name: 'Garuda Vega' }, { id: 'SIH25-A0H-T311', name: 'AI OnTrack' }, { id: 'SIH25-A0H-T272', name: 'DeepBlue' } ],
+    'SIH25035': [ { id: 'SIH25-A0H-T082', name: 'Easyup' }, { id: 'SIH25-A0H-T136', name: 'Hackathon Hustlers' } ],
+    'SIH25079': [ { id: 'SIH25-A0H-T274', name: 'HexaForce' }, { id: 'SIH25-A0H-T308', name: 'Safe Line' }, { id: 'SIH25-A0H-T330', name: 'Electranova' } ],
+    'SIH25050': [ { id: 'SIH25-A0H-T052', name: 'Helix' }, { id: 'SIH25-A0H-T063', name: 'HackCrew' }, { id: 'SIH25-A0H-T204', name: 'Cloud Surfers' }, { id: 'SIH25-A0H-T206', name: 'INFINITRA' }, { id: 'SIH25-A0H-T223', name: 'Gj Mavens' }, { id: 'SIH25-A0H-T260', name: 'Innovators' }, { id: 'SIH25-A0H-T297', name: 'Built2Solve' } ],
+    'SIH25028': [ { id: 'SIH25-A0H-T256', name: 'Eclipse' }, { id: 'SIH25-A0H-T219', name: 'Daring Ddr6s' }, { id: 'SIH25-A0H-T016', name: 'Hackaholics' } ],
+    'SIH25001': [ { id: 'SIH25-A0H-T106', name: 'Singularities' }, { id: 'SIH25-A0H-T195', name: 'Power Rangers' } ],
+    'SIH25010': [ { id: 'SIH25-A0H-T025', name: 'AGRIVISION' }, { id: 'SIH25-A0H-T076', name: 'HexaBytes' }, { id: 'SIH25-A0H-T092', name: 'DIY' }, { id: 'SIH25-A0H-T111', name: 'SmartAgro' }, { id: 'SIH25-A0H-T140', name: 'QUANTUM HACKS' }, { id: 'SIH25-A0H-T232', name: 'AGROTRADE' } ],
+    'SIH25031': [ { id: 'SIH25-A0H-T011', name: 'Neon Genesis' }, { id: 'SIH25-A0H-T038', name: 'Hexaverse' }, { id: 'SIH25-A0H-T064', name: 'Code Crew' }, { id: 'SIH25-A0H-T102', name: 'Monotones' }, { id: 'SIH25-A0H-T108', name: 'HydraSoft' }, { id: 'SIH25-A0H-T115', name: 'The Syntax Squad' }, { id: 'SIH25-A0H-T127', name: 'Hackeys' }, { id: 'SIH25-A0H-T145', name: 'TeamArete' }, { id: 'SIH25-A0H-T157', name: 'Revolv' }, { id: 'SIH25-A0H-T165', name: 'Civic Ninjas' }, { id: 'SIH25-A0H-T307', name: 'InnovIndians' }, { id: 'SIH25-A0H-T326', name: 'Code4Cause' }, { id: 'SIH25-A0H-T339', name: 'Horizon X' } ],
+    'SIH25097': [ { id: 'SIH25-A0H-T169', name: 'The Seedineers' }, { id: 'SIH25-A0H-T320', name: 'Greendrive' }, { id: 'SIH25-A0H-T328', name: 'Agri' } ],
+    'SIH12507': [ { id: 'SIH25-A0H-T152', name: 'Innovative Embers' }, { id: 'SIH25-A0H-T184', name: 'DesignX' } ],
+    'SIH25135': [ { id: 'SIH25-A0H-T321', name: 'CODE GRABBERS' } ],
+    'SIH25139': [ { id: 'SIH25-A0H-T085', name: 'Novus Thinkers' }, { id: 'SIH25-A0H-T158', name: 'Smarthack' }, { id: 'SIH25-A0H-T229', name: 'Team Seventie' } ],
+    'SIH25060': [ { id: 'SIH25-A0H-T100', name: 'Code Czars' } ],
+    'SIH25018': [ { id: 'SIH25-A0H-T006', name: 'The Mindforge' }, { id: 'SIH25-A0H-T072', name: 'LoRA the Explorers' }, { id: 'SIH25-A0H-T107', name: 'J.A.R.V.I.S' }, { id: 'SIH25-A0H-T151', name: 'SehatConnect' }, { id: 'SIH25-A0H-T187', name: 'Quantum Crews' } ],
+    'SIH25024': [ { id: 'SIH25-A0H-T197', name: 'Synapse' }, { id: 'SIH25-A0H-T294', name: 'Baymax 2.0' } ],
+    'SIH25026': [ { id: 'SIH25-A0H-T220', name: 'Six Shades of Mind' } ],
+    'SIH25092': [ { id: 'SIH25-A0H-T079', name: 'Horcrux Hackers' }, { id: 'SIH25-A0H-T273', name: 'SoulSync' }, { id: 'SIH25-A0H-T313', name: 'Logikon' } ],
+    'SIH25061': [ { id: 'SIH25-A0H-T147', name: 'CodeVoyagers' }, { id: 'SIH25-A0H-T193', name: 'SacredBytes' } ],
+    'SIH25082': [ { id: 'SIH25-A0H-T075', name: 'Metaminds' }, { id: 'SIH25-A0H-T212', name: 'WavFarers' } ],
+    'SIH25012': [ { id: 'SIH25-A0H-T058', name: 'QBic Innovators' }, { id: 'SIH25-A0H-T139', name: 'Teen Titans' }, { id: 'SIH25-A0H-T262', name: 'Hexa Core' } ],
+    'SIH25016': [ { id: 'SIH25-A0H-T198', name: 'Team SYNERGY' }, { id: 'SIH25-A0H-T298', name: 'AlgoWavez' } ],
+    'SIH25017': [ { id: 'SIH25-A0H-T203', name: 'Coding Crusaders' }, { id: 'SIH25-A0H-T245', name: 'Byte Me' }, { id: 'SIH25-A0H-T261', name: 'Kernel Guardians' } ],
+    'SIH25019': [ { id: 'SIH25-A0H-T292', name: 'SIKHYA JAGRITI' } ],
+    'SIH25065': [ { id: 'SIH25-A0H-T133', name: 'HackMantra' } ],
+    'SIH25080': [ { id: 'SIH25-A0H-T288', name: 'SYN6' }, { id: 'SIH25-A0H-T345', name: 'The Sixth Sense' } ],
+    'SIH25009': [ { id: 'SIH25-A0H-T004', name: 'Code Catalyst' }, { id: 'SIH25-A0H-T021', name: 'EcoQuest' }, { id: 'SIH25-A0H-T042', name: 'Hexcode' }, { id: 'SIH25-A0H-T161', name: 'Ecoverse' }, { id: 'SIH25-A0H-T351', name: 'Envo' } ],
+    'SIH25043': [ { id: 'SIH25-A0H-T207', name: 'Hexa Corals' }, { id: 'SIH25-A0H-T234', name: 'MicroGuardians' } ],
+    'SIH25048': [ { id: 'SIH25-A0H-T186', name: 'Byte Busters' }, { id: 'SIH25-A0H-T251', name: 'Coders Creed' } ],
+    'SIH25070': [ { id: 'SIH25-A0H-T009', name: 'BUSTER CALL' }, { id: 'SIH25-A0H-T010', name: 'NuLL1' }, { id: 'SIH25-A0H-T033', name: 'Ritzy' }, { id: 'SIH25-A0H-T210', name: 'Cognix' } ],
+    'SIH25015': [ { id: 'SIH25-A0H-T060', name: 'AgriNex' }, { id: 'SIH25-A0H-T061', name: 'Tech Tigers' }, { id: 'SIH25-A0H-T224', name: 'Matmap' } ],
+    'SIH25126': [ { id: 'SIH25-A0H-T124', name: 'BLACKOPS' } ],
+    'SIH25053': [ { id: 'SIH25-A0H-T086', name: 'Thinknest' }, { id: 'SIH25-A0H-T117', name: 'Crop Harvest' }, { id: 'SIH25-A0H-T194', name: 'InnovateX' }, { id: 'SIH25-A0H-T216', name: 'RippleX' } ],
+    'SIH25062': [ { id: 'SIH25-A0H-T018', name: 'Techackoo' }, { id: 'SIH25-A0H-T319', name: 'Uzhaviya' } ],
+    'SIH25109': [ { id: 'SIH25-A0H-T104', name: 'Eco-Wave' }, { id: 'SIH25-A0H-T300', name: 'Techno Morphs' } ],
+    'SIH25025': [ { id: 'SIH25-A0H-T015', name: 'The Flavs' } ],
+    'SIH25051': [ { id: 'SIH25-A0H-T128', name: 'Ecotrons' }, { id: 'SIH25-A0H-T302', name: 'Hardwired Solutions' }, { id: 'SIH25-A0H-T332', name: 'NeoVortex' } ],
+    'SIH25063': [ { id: 'SIH25-A0H-T084', name: 'Power Pioneers' }, { id: 'SIH25-A0H-T109', name: 'Technova' }, { id: 'SIH25-A0H-T148', name: 'Technovators' }, { id: 'SIH25-A0H-T156', name: 'Team SmartDetect' }, { id: 'SIH25-A0H-T321', name: 'Cirquix' } ],
+    'SIH25021': [ { id: 'SIH25-A0H-T027', name: 'LocoTrackr' }, { id: 'SIH25-A0H-T349', name: 'PiXels~' } ],
+    'SIH25125': [ { id: 'SIH25-A0H-T258', name: 'AeroMatrix' } ],
+    'SIH25014': [ { id: 'SIH25-A0H-T001', name: 'Code Blitzers' } ],
+    'SIH25046': [ { id: 'SIH25-A0H-T094', name: 'go_touch_grass.exe' }, { id: 'SIH25-A0H-T164', name: 'Ecobots' }, { id: 'SIH25-A0H-T173', name: 'Sortify' }, { id: 'SIH25-A0H-T177', name: 'Idea Forge' }, { id: 'SIH25-A0H-T259', name: 'The Algorythms' } ],
+    'SIH25020': [ { id: 'SIH25-A0H-T097', name: 'Narrow Crew' } ],
+    'SIH25077': [ { id: 'SIH25-A0H-T353', name: 'Electro Circuitos' } ],
+    'SIH25118': [ { id: 'SIH25-A0H-T293', name: 'Eshwar' }, { id: 'SIH25-HD-T001', name: 'Eco Rider' } ],
+    'SIH25095': [ { id: 'SIH25-A0H-T002', name: 'Voxel' }, { id: 'SIH25-A0H-T185', name: 'Vasan Vortex' }, { id: 'SIH25-A0H-T271', name: 'Printelligence' } ],
+    'SIH25036': [ { id: 'SIH25-A0H-T093', name: 'Mecha Minds' }, { id: 'SIH25-A0H-T178', name: 'EcoSentry' }, { id: 'SIH25-A0H-T189', name: 'Oceanites' }, { id: 'SIH25-A0H-T282', name: 'Acqua Guardians' }, { id: 'SIH25-A0H-T296', name: 'Microbusterz' } ],
+    'SIH25056': [ { id: 'SIH25-A0H-T053', name: 'LUMINEX' } ],
+    'SIH25058': [ { id: 'SIH25-A0H-T237', name: 'FairTare' } ],
+    'SIH25047': [ { id: 'SIH25-A0H-T054', name: 'Albatross Reborn 2.0' }, { id: 'SIH25-A0H-T059', name: 'BrainStormers' }, { id: 'SIH25-A0H-T276', name: 'Nimbus' }, { id: 'SIH25-A0H-T286', name: 'ResQ Wings' } ],
+    'SIH25117': [ { id: 'SIH25-A0H-T162', name: 'Stellar Craft' }, { id: 'SIH25-A0H-T281', name: 'Vyomear' }, { id: 'SIH25-A0H-T317', name: 'Odin Project' } ],
+};
+
+const allProblemDetails = {
+    'SIH25001': { title: 'Smart Community Health Monitoring and Early Warning System...', category: 'Software', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25002': { title: 'Smart Tourist Safety Monitoring & Incident Response System...', category: 'Software', theme: 'Travel & Tourism' },
+    'SIH25003': { title: 'Low-Cost smart transportation solution for Agri produce...', category: 'Hardware', theme: 'Transportation & Logistics' },
+    'SIH25004': { title: 'lmage based breed recognition for cattle and buffaloes of India', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25010': { title: 'Smart Crop Advisory System for Small and Marginal Farmers', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25012': { title: 'Automated Attendance System for Rural Schools', category: 'Software', theme: 'Smart Education' },
+    'SIH25013': { title: 'Real-Time Public Transport Tracking for Small Cities', category: 'Software', theme: 'Transportation & Logistics' },
+    'SIH25014': { title: 'Waste Segregation Monitoring System for Urban Local Bodies', category: 'Hardware', theme: 'Clean & Green Technology' },
+    'SIH25015': { title: 'Intelligent Pesticide Sprinkling System Determined by the Infection Level of a Plant', category: 'Hardware', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25016': { title: 'Automated Student Attendance Monitoring and Analytics System for Colleges', category: 'Software', theme: 'Smart Education' },
+    'SIH25017': { title: 'Digital Platform for Centralized Alumni Data Management and Engagement', category: 'Software', theme: 'Smart Education' },
+    'SIH25018': { title: 'Telemedicine Access for Rural Healthcare in Nabha', category: 'Software', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25019': { title: 'Digital Learning Platform for Rural School Students in Nabha', category: 'Software', theme: 'Smart Education' },
+    'SIH25020': { title: 'Development of indigenous contactless Integrated Track Monitoring Systems (ITMS)...', category: 'Hardware', theme: 'Smart Automation' },
+    'SIH25021': { title: 'AI based development of Laser based QR Code marking on track fittings...', category: 'Hardware', theme: 'Transportation & Logistics' },
+    'SIH25022': { title: 'Maximizing Section Throughput Using Al-Powered Precise Train Traffic Control', category: 'Software', theme: 'Transportation & Logistics' },
+    'SIH25024': { title: 'Comprehensive Cloud-Based Practice Management & Nutrient Analysis Software...', category: 'Software', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25025': { title: 'E tongue for Dravya identification', category: 'Hardware', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25026': { title: 'Develop API code to integrate NAMASTE and or the International Classification of Diseases (ICD-11)...', category: 'Software', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25027': { title: 'Develop a blockchain-based system for botanical traceability of Ayurvedic herbs...', category: 'Software', theme: 'Blockchain & Cybersecurity' },
+    'SIH25028': { title: 'Smart Classroom & Timetable Scheduler', category: 'Software', theme: 'Smart Education' },
+    'SIH25029': { title: 'Authenticity Validator for Academia', category: 'Software', theme: 'Smart Education' },
+    'SIH25030': { title: 'Al-Based Crop Recommendation for Farmers', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25031': { title: 'Crowdsourced Civic lssue Reporting and Resolution System', category: 'Software', theme: 'Clean & Green Technology' },
+    'SIH25033': { title: 'Al-Based Smart Allocation Engine for PM Internship Scheme', category: 'Software', theme: 'Smart Automation' },
+    'SIH25034': { title: 'Al-Based Internship Recommendation Engine for PM Internship Scheme', category: 'Software', theme: 'Smart Education' },
+    'SIH25035': { title: 'Sentiment analysis of comments received through E-consultation module', category: 'Software', theme: 'Miscellaneous' },
+    'SIH25036': { title: 'Development of Sensor for Detection Of Microplastics', category: 'Hardware', theme: 'Miscellaneous' },
+    'SIH25038': { title: 'Blockchain-Based Blue Carbon Registry and MRV System', category: 'Software', theme: 'Clean & Green Technology' },
+    'SIH25040': { title: 'FloatChat - AI-Powered Conversational Interface for ARGO Ocean Data Discovery...', category: 'Software', theme: 'Miscellaneous' },
+    'SIH25041': { title: 'AI-Driven Unified Data Platform for Oceanographic, Fisheries, and Molecular Biodiversity Insights', category: 'Software', theme: 'Renewable / Sustainable Energy' },
+    'SIH25043': { title: 'Embedded Intelligent Microscopy System for Identification and Counting of Microscopic Marine Organisms', category: 'Hardware', theme: 'Smart Automation' },
+    'SIH25044': { title: 'Al-Powered Crop Yield Prediction and Optimization', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25045': { title: 'Blockchain-Based Supply Chain Transparency for Agricultural Produce', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25046': { title: 'Smart Waste Segregation and Recycling System', category: 'Hardware', theme: 'Clean & Green Technology' },
+    'SIH25047': { title: 'Disaster Response Drone for Remote Areas', category: 'Hardware', theme: 'Robotics and Drones' },
+    'SIH25048': { title: 'Gamified Learning Platform for Rural Education', category: 'Software', theme: 'Smart Education' },
+    'SIH25049': { title: 'Al-Driven Public Health Chatbot for Disease Awareness', category: 'Software', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25050': { title: 'Smart Traffic Management Systern for Urban Congestion', category: 'Software', theme: 'Transportation & Logistics' },
+    'SIH25051': { title: 'Renewable Energy Monitoring System for Microgrids', category: 'Hardware', theme: 'Renewable / Sustainable Energy' },
+    'SIH25053': { title: 'Improved Onion storage technology for enhancing shelf life of onions', category: 'Hardware', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25056': { title: 'To explore new/altermative assaying methods for testing of gold jewellery...', category: 'Hardware', theme: 'Miscellaneous' },
+    'SIH25058': { title: 'Detection and Prevention of Tampering in Weighing and Measuring instruments', category: 'Hardware', theme: 'Miscellaneous' },
+    'SIH25060': { title: 'Real life solutions for Waste Management.', category: 'Software', theme: 'Clean & Green Technology' },
+    'SIH25061': { title: 'Digitize and Showcase Monasteries of Sikkim for Tourism and Cultural Preservation', category: 'Software', theme: 'Travel & Tourism' },
+    'SIH25062': { title: 'Implementation of Smart Agriculture for Efficient Cultivation in Hilly Regions', category: 'Hardware', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25063': { title: 'Developing a cost effective solution for detecting the breakage of Low Voltage AC Distribution Over Head conductors', category: 'Hardware', theme: 'Disaster Management' },
+    'SIH25065': { title: 'Designing and development of an application for on spot assessment of Roof Top Rain water harvesting...', category: 'Software', theme: 'Smart Automation' },
+    'SIH25066': { title: 'Development of an Al-driven ChatBOT for INGRES as a virtuall assistant', category: 'Software', theme: 'Smart Automation' },
+    'SIH25069': { title: 'Al-Driven Life Cycle Assessment (LCA) Tool for Advancing Circulanty...', category: 'Software', theme: 'Miscellaneous' },
+    'SIH25070': { title: 'Secure Data Wiping for Trustworthy IT Asset Recycling', category: 'Software', theme: 'Miscellaneous' },
+    'SIH25071': { title: 'Al-Based Rockfall Prediction and Alert System for Open-Pit Mines', category: 'Software', theme: 'Disaster Management' },
+    'SIH25073': { title: 'Al-Powered Mobile Platform for Democratizing Sports Talent Assessment', category: 'Software', theme: 'Fitness & Sports' },
+    'SIH25074': { title: 'AI-Powered Personal Farming Assistant for Kerala Farmers', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25075': { title: 'Gamified Platform to Promote Sustainable Farming Practices', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25076': { title: 'AI-Based Farmer Query Support and Advisory System', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25077': { title: 'A hardware that can detect and prevent unauthorized use of electric fences', category: 'Hardware', theme: 'Smart Automation' },
+    'SIH25079': { title: 'Software other than a circuit breaker that can be used to detect and turn off LT lines when the line breaks', category: 'Software', theme: 'Disaster Management' },
+    'SIH25080': { title: 'Document Overload at Kochi Metro Rail Limited (KMRL)-An automated solution', category: 'Software', theme: 'Smart Automation' },
+    'SIH25081': { title: 'AI-Driven Train Induction Planning & Scheduling for Kochi Metro Rail Limited (KMRL)', category: 'Software', theme: 'Smart Automation' },
+    'SIH25082': { title: 'Development of a travel related software app that can be installed on mobile phones...', category: 'Software', theme: 'Transportation & Logistics' },
+    'SIH25091': { title: 'AI-Based Timetable Generation System aligned with NEP 2020...', category: 'Software', theme: 'Smart Automation' },
+    'SIH25092': { title: 'Development of a Digital Mental Health and Psychological Support System...', category: 'Software', theme: 'MedTech / BioTech / HealthTech' },
+    'SIH25094': { title: 'One-Stop Personalized Career & Education Advisor', category: 'Software', theme: 'Smart Education' },
+    'SIH25095': { title: 'Research and redesign a sport equipment...', category: 'Hardware', theme: 'Smart Education' },
+    'SIH25097': { title: 'Research and develop a design on autonomous small precision focused machine...', category: 'Software', theme: 'Smart Education' },
+    'SIH25099': { title: 'AI-powered monitoring of crop health, soil condition, and pest risks...', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25102': { title: 'AI-based drop-out prediction and counseling system', category: 'Software', theme: 'Smart Automation' },
+    'SIH25104': { title: 'Language Agnostic Chatbot', category: 'Software', theme: 'Smart Education' },
+    'SIH12507': { title: 'Develop computer programs to identify the design principles behind the Kolam designs...', category: 'Software', theme: 'Heritage & Culture' },
+    'SIH12508': { title: 'Development of AI-powered FRA Atlas and WebGIS-based Decision Support System (DSS)...', category: 'Software', theme: 'Miscellaneous' },
+    'SIH25109': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Agriculture, FoodTech & Rural Development', category: 'Hardware', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25117': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Robotics and Drones', category: 'Hardware', theme: 'Robotics and Drones' },
+    'SIH25118': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Smart Automation', category: 'Hardware', theme: 'Smart Automation' },
+    'SIH25125': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Space Technology', category: 'Hardware', theme: 'Space Technology' },
+    'SIH25126': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Agriculture, FoodTech & Rural Development', category: 'Software', theme: 'Agriculture, FoodTech & Rural Development' },
+    'SIH25135': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Smart Automation', category: 'Software', theme: 'Smart Automation' },
+    'SIH25139': { title: 'Student Innovation: Swadeshi for Atmanirbhar Bharat - Disaster Management', category: 'Software', theme: 'Disaster Management' }
+};
+
+const availableProblemIDs = Object.keys(completedTeamsData);
+const problemStatements = availableProblemIDs.map(id => ({
+    psNumber: id,
+    ...allProblemDetails[id]
+}));
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categorySelect = document.getElementById('categorySelect');
+    const themeSelect = document.getElementById('themeSelect');
+    const problemSelect = document.getElementById('problemSelect');
+    const teamsResultDiv = document.getElementById('teamsResult');
+    const teamsList = document.getElementById('teamsList');
+
+    const resetDropdown = (selectElement, defaultText) => {
+        selectElement.innerHTML = `<option value="">-- ${defaultText} --</option>`;
+        selectElement.disabled = true;
+    };
+
+    const resetTeamResults = () => {
+        teamsResultDiv.style.display = 'none';
+        teamsList.innerHTML = '';
+    };
+
+    categorySelect.addEventListener('change', () => {
+        const selectedCategory = categorySelect.value;
+        
+        resetDropdown(themeSelect, 'Select Theme');
+        resetDropdown(problemSelect, 'Select Problem Statement');
+        resetTeamResults();
+
+        if (selectedCategory) {
+            const themes = [...new Set(problemStatements
+                .filter(p => p.category === selectedCategory)
+                .map(p => p.theme)
+            )].sort();
+            
+            if (themes.length > 0) {
+                themes.forEach(theme => {
+                    const option = document.createElement('option');
+                    option.value = theme;
+                    option.textContent = theme;
+                    themeSelect.appendChild(option);
+                });
+                themeSelect.disabled = false;
+            } else {
+                 resetDropdown(themeSelect, 'No Themes Available');
+            }
+        }
+    });
+
+    themeSelect.addEventListener('change', () => {
+        const selectedCategory = categorySelect.value;
+        const selectedTheme = themeSelect.value;
+        
+        resetDropdown(problemSelect, 'Select Problem Statement');
+        resetTeamResults();
+
+        if (selectedTheme) {
+            const problems = problemStatements
+                .filter(p => p.category === selectedCategory && p.theme === selectedTheme)
+                .sort((a, b) => a.title.localeCompare(b.title));
+
+            problems.forEach(problem => {
+                const option = document.createElement('option');
+                option.value = problem.psNumber;
+                option.textContent = `${problem.psNumber} - ${problem.title}`;
+                problemSelect.appendChild(option);
+            });
+            problemSelect.disabled = false;
+        }
+    });
+
+    problemSelect.addEventListener('change', () => {
+        const selectedProblemId = problemSelect.value;
+        resetTeamResults();
+
+        if (selectedProblemId) {
+            const participatingTeams = completedTeamsData[selectedProblemId] || [];
+            
+            if (participatingTeams.length > 0) {
+                participatingTeams.forEach(team => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${team.name}</strong> <br> <span>ID: ${team.id}</span>`;
+                    teamsList.appendChild(li);
+                });
+                teamsResultDiv.style.display = 'block';
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>
