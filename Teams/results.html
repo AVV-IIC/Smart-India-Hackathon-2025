@@ -25,7 +25,7 @@ Updated Date: 25st Sept 2025
         }
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 1000px;
             background-color: rgb(228, 245, 255);
             padding: 30px 40px;
             border-radius: 12px;
@@ -114,30 +114,65 @@ Updated Date: 25st Sept 2025
             font-size: large;
             color: darkgreen;
         }
-         /* Basic styling for a "beautified" table */
-          table {
-            border-collapse: collapse;
-            width: 60%;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-          }
-          th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-          }
-          th {
-            background-color: #4CAF50;
-            color: white;
-          }
-          tr:nth-child(even) {
-            background-color: #f2f2f2;
-          }
-          caption {
-            margin-bottom: 10px;
-            font-weight: bold;
-            font-size: 1.1em;
-          }
+       /* Modern, Clean Table Style */
+      .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.95em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-width: 450px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-radius: 10px; /* Rounded corners for the table */
+        overflow: hidden; /* Ensures rounded corners apply to content */
+      }
+    
+      .styled-table thead tr {
+        background-color: #007bff; /* Primary Blue for Header */
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+      }
+    
+      .styled-table th,
+      .styled-table td {
+        padding: 12px 15px;
+        border: none; /* Remove default cell borders */
+      }
+    
+      .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd; /* Light separator line */
+        transition: background-color 0.3s;
+      }
+    
+      .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3; /* Subtle striping for readability */
+      }
+    
+      .styled-table tbody tr:hover {
+        background-color: #cce5ff; /* Light blue hover effect */
+        font-weight: 500;
+      }
+    
+      .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #007bff; /* Stronger bottom border for finality */
+      }
+      
+      /* Caption Styling */
+      .main-caption {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #28a745; /* Celebration Green */
+        margin-bottom: 5px;
+        text-align: center;
+        padding-top: 10px;
+      }
+      
+      .sub-caption {
+        font-size: 0.9em;
+        color: #6c757d;
+        text-align: center;
+        margin-bottom: 15px;
+      }
     </style>
 </head>
 <body>
@@ -149,8 +184,13 @@ Updated Date: 25st Sept 2025
     
     <h1>Smart India Hackathon - 2025<br/> Internal Hackathon Results</h1>
 
-    <table>
-  <caption>Team Data (Team ordering is not in any specific order in this table)</caption>
+    <div style="text-align: center;">
+      <div class="main-caption">Congratulations to the below teams!</div>
+      <div class="sub-caption">Note: Team ordering is not in any specific order in this list.</div>
+    </div>
+
+
+<table class="styled-table" style="margin: 20px auto;">
   <thead>
     <tr>
       <th>Team Number</th>
@@ -211,6 +251,7 @@ Updated Date: 25st Sept 2025
     <tr><td>SIH25-A0H-T077</td><td>Silver Arrows</td></tr>
   </tbody>
 </table>
+
     
     <div class="dropdown-container">
         <label for="categorySelect">1. Choose a Category:</label>
