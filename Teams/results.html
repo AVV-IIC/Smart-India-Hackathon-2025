@@ -589,6 +589,134 @@ for (const key in completedTeamsData) {
   }
 }
 
+	const teams = [
+    { id: "SIH25-A0H-T055", name: "Bovi-Tech" },
+    { id: "SIH25-A0H-T106", name: "Singularities" },
+    { id: "SIH25-A0H-T092", name: "DIY" },
+    { id: "SIH25-A0H-T283", name: "Credora" },
+    { id: "SIH25-A0H-T139", name: "Teen Titans" },
+    { id: "SIH25-A0H-T327", name: "NovaForge" },
+    { id: "SIH25-A0H-T165", name: "Civic Ninjas" },
+    { id: "SIH25-A0H-T193", name: "SacredBytes" },
+    { id: "SIH25-A0H-T245", name: "Byte Me" },
+    { id: "SIH25-A0H-T178", name: "EcoSentry" },
+    { id: "SIH25-A0H-T296", name: "Microbusterz" },
+    { id: "SIH25-A0H-T119", name: "MIRAKS" },
+    { id: "SIH25-A0H-T304", name: "VanGuards" },
+    { id: "SIH25-A0H-T150", name: "Innoverse" },
+    { id: "SIH25-A0H-T129", name: "200_OK" },
+    { id: "SIH25-A0H-T306", name: "Chitti Chitti Robo" },
+    { id: "SIH25-A0H-T163", name: "Logic Luminaries" },
+    { id: "SIH25-A0H-T317", name: "Odin Project" },
+    { id: "SIH25-A0H-T224", name: "Matmap" },
+    { id: "SIH25-A0H-T307", name: "InnovIndians" },
+    { id: "SIH25-A0H-T197", name: "Synapse" },
+    { id: "SIH25-A0H-T261", name: "Kernel Guardians" },
+    { id: "SIH25-A0H-T234", name: "MicroGuardians" },
+    { id: "SIH25-A0H-T303", name: "UnBrokenChain" },
+    { id: "SIH25-A0H-T156", name: "Team SmartDetect" },
+    { id: "SIH25-A0H-T066", name: "VdF5n" },
+    { id: "SIH25-A0H-T288", name: "SYN6" },
+    { id: "SIH25-A0H-T063", name: "HackCrew" },
+    { id: "SIH25-A0H-T152", name: "Innovative Embers" },
+    { id: "SIH25-A0H-T184", name: "DesignX" },
+    { id: "SIH25-A0H-T071", name: "Works On My Machine" },
+    { id: "SIH25-A0H-T349", name: "PiXels~" },
+    { id: "SIH25-A0H-T158", name: "Smarthack" },
+    { id: "SIH25-A0H-T109", name: "Technova" },
+    { id: "SIH25-A0H-T183", name: "Glitch Squad" },
+    { id: "SIH25-A0H-T118", name: "Paradoxx" },
+    { id: "SIH25-A0H-T098", name: "Codeezy" },
+    { id: "SIH25-A0H-T049", name: "Spectrons" },
+    { id: "SIH25-A0H-T217", name: "Newgate" },
+    { id: "SIH25-A0H-T207", name: "Hexa Corals" },
+    { id: "SIH25-A0H-T141", name: "CIVIC CODERS NEXUS" },
+    { id: "SIH25-A0H-T003", name: "404" },
+    { id: "SIH25-A0H-T328", name: "Agri" },
+    { id: "SIH25-A0H-T294", name: "Baymax 2.0" },
+    { id: "SIH25-A0H-T212", name: "WavFarers" },
+    { id: "SIH25-A0H-T189", name: "Oceanites" },
+    { id: "SIH25-A0H-T110", name: "Sternritters" },
+    { id: "SIH25-A0H-T188", name: "Farmsight" },
+    { id: "SIH25-A0H-T028", name: "IDEON" },
+    { id: "SIH25-A0H-T272", name: "DeepBlue" },
+    { id: "SIH25-A0H-T077", name: "Silver Arrows" },
+    { id: "SIH25-A0H-T050", name: "HackOps" },
+    { id: "SIH25-A0H-T024", name: "Apex" },
+    { id: "SIH25-A0H-T047", name: "Blockchain Battalion" },
+    { id: "SIH25-A0H-T258", name: "AeroMatrix" },
+    { id: "SIH25-A0H-T023", name: "Garuda Vega" },
+    { id: "SIH25-A0H-T100", name: "Code Czars" },
+    { id: "SIH25-A0H-T009", name: "BUSTER CALL" },
+    { id: "SIH25-A0H-T320", name: "Greendrive" },
+    { id: "SIH25-A0H-T157", name: "Revolv" },
+    { id: "SIH25-A0H-T161", name: "Ecoverse" },
+    { id: "SIH25-A0H-T246", name: "Brute Force" },
+    { id: "SIH25-A0H-T181", name: "ZeroDay" },
+    { id: "SIH25-A0H-T011", name: "Neon Genesis" },
+    { id: "SIH25-A0H-T108", name: "HydraSoft" },
+    { id: "SIH25-A0H-T075", name: "Metaminds" },
+    { id: "SIH25-A0H-T290", name: "Haul" },
+    { id: "SIH25-A0H-T297", name: "Built2Solve" },
+    { id: "SIH25-A0H-T038", name: "Hexaverse" },
+    { id: "SIH25-A0H-T044", name: "Transponova" },
+    { id: "SIH25-A0H-T248", name: "PhotonFlow" },
+    { id: "SIH25-A0H-T326", name: "Code4Cause" },
+    { id: "SIH25-A0H-T293", name: "Eshwar" },
+    { id: "SIH25-A0H-T174", name: "Hackleets" },
+    { id: "SIH25-A0H-T076", name: "HexaBytes" },
+    { id: "SIH25-A0H-T052", name: "Helix" },
+    { id: "SIH25-A0H-T029", name: "Team Averon" },
+    { id: "SIH25-A0H-T345", name: "The Sixth Sense" },
+    { id: "SIH25-A0H-T030", name: "Techsparkles" },
+    { id: "SIH25-A0H-T186", name: "Byte Busters" },
+    { id: "SIH25-A0H-T203", name: "Coding Crusaders" },
+    { id: "SIH25-A0H-T104", name: "Eco-Wave" },
+    { id: "SIH25-A0H-T081", name: "HexaBits" },
+    { id: "SIH25-A0H-T115", name: "The Syntax Squad" },
+    { id: "SIH25-A0H-T308", name: "Safe Line" },
+    { id: "SIH25-A0H-T012", name: "Perspicacious Sapiens" },
+    { id: "SIH25-A0H-T138", name: "Digital Innovators" },
+    { id: "SIH25-A0H-T103", name: "Poseinet" },
+    { id: "SIH25-A0H-T263", name: "MindMesh" },
+    { id: "SIH25-A0H-T172", name: "Code Medics" },
+    { id: "SIH25-A0H-T074", name: "Apex Mech-heads" },
+    { id: "SIH25-A0H-T271", name: "Printelligence" },
+    { id: "SIH25-HD-T002", name: "Heretics" },
+    { id: "SIH25-DL-T001", name: "Margdarshini" },
+    { id: "SIH25-DL-T002", name: "Legacy" },
+    { id: "SIH25-DL-T003", name: "HealConnect" },
+    { id: "SIH25-DL-T004", name: "NextGenLearners" },
+    { id: "SIH25-DL-T005", name: "TheBinnovators" },
+    { id: "SIH25-HD-T001", name: "Eco Rider" },
+    { id: "SIH25-DL-T006", name: "NullPointers" }
+];
+
+// Function to map teams to problem statements
+function mapTeamsToProblemStatements(teams, completedTeamsData) {
+    const result = [];
+
+    teams.forEach(team => {
+        let found = false;
+        for (const problem in completedTeamsData) {
+            const matchedTeam = completedTeamsData[problem].find(t => t.id === team.id);
+            if (matchedTeam) {
+                result.push({ teamName: team.name, teamId: team.id, problemStatement: problem });
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            result.push({ teamName: team.name, teamId: team.id, problemStatement: "Not Found" });
+        }
+    });
+
+    return result;
+}
+
+const mappedResults = mapTeamsToProblemStatements(teams, completedTeamsData);
+console.log(mappedResults);
+
 console.log("Grand Total:", totalCount, "teams");
 
 const availableProblemIDs = Object.keys(completedTeamsData);
