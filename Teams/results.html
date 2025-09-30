@@ -578,16 +578,18 @@ const allProblemDetails = {
     'SIH25009': { title: 'Gamified Environmental Education Platform for Schools and Colleges', category:'Software', theme:'Smart Education'}
 };
 
-// Count total objects across all problem statements
 let totalCount = 0;
 
+// Loop through each problem statement
 for (const key in completedTeamsData) {
   if (Array.isArray(completedTeamsData[key])) {
-    totalCount += completedTeamsData[key].length;
+    const count = completedTeamsData[key].length;
+    totalCount += count;
+    console.log(`${key} → ${count} teams`);
   }
 }
 
-console.log("Total {} objects:", totalCount);
+console.log("Grand Total:", totalCount, "teams");
 
 const availableProblemIDs = Object.keys(completedTeamsData);
 const problemStatements = availableProblemIDs.map(id => ({
