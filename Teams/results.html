@@ -589,6 +589,8 @@ for (const key in completedTeamsData) {
   }
 }
 
+console.log("Grand Total:", totalCount, "teams");
+
 	const teams = [
     { id: "SIH25-A0H-T055", name: "Bovi-Tech" },
     { id: "SIH25-A0H-T106", name: "Singularities" },
@@ -717,7 +719,13 @@ function mapTeamsToProblemStatements(teams, completedTeamsData) {
 const mappedResults = mapTeamsToProblemStatements(teams, completedTeamsData);
 console.log(mappedResults);
 
-console.log("Grand Total:", totalCount, "teams");
+const problemStatementCounts = {};
+
+for (const problemId in mappedResults) {
+    problemStatementCounts[problemId] = mappedResults[problemId].length;
+}
+
+console.log(problemStatementCounts);
 
 const availableProblemIDs = Object.keys(completedTeamsData);
 const problemStatements = availableProblemIDs.map(id => ({
