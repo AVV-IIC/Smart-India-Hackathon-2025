@@ -226,6 +226,19 @@ Updated Date: 03rd Oct 2025
              display: none;
         }
       }
+
+/* Make wide tables scroll horizontally on mobile */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  margin-bottom: 20px;
+}
+.styled-table {
+  width: 100%;
+  min-width: 600px; /* Keep columns readable, scroll if too small */
+}
+
     </style>
 </head>
 <body>
@@ -240,7 +253,8 @@ Updated Date: 03rd Oct 2025
 <div style="text-align: left;">
   <div class="main-caption">Submission and Progress Tracker</div>
 </div>
-<table class="styled-table" style="margin: 20px auto;">
+<div class="table-container">
+  <table class="styled-table" style="margin: 20px auto;">
   <thead>
     <tr>
       <th>S.No.</th>
@@ -355,6 +369,7 @@ Updated Date: 03rd Oct 2025
     <tr><td>100</td><td>SIH25-DL-T006</td><td>NullPointers</td><td></td></tr>	
   </tbody>
 </table>
+</div>
 </div>
 <footer>
     <p>&copy; SIH 2025, Institution's Innovation Council (IIC) 8.0, Amrita Vishwa Vidyapeetham, Coimbatore. </p>
