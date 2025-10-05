@@ -1,0 +1,380 @@
+<!-- 
+Authors: Mr. Ramaguru Radhakrishnan 
+Created Date: 26th Sept 2025 
+Updated Date: 03rd Oct 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIH 2025 - Shortlisted Teams</title>
+<style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 10px; /* Reduced overall padding for mobile */
+            color: #333;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: rgb(228, 245, 255);
+            padding: 20px 15px; /* Reduced container padding for mobile */
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: darkblue;
+            margin-bottom: 20px; /* Adjusted margin */
+            font-weight: 600;
+            padding: 10px; /* Adjusted padding */
+            font-size: 1.5em; /* Adjusted size for mobile */
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black; 
+        }
+        .dropdown-container {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            -webkit-appearance: none; /* Mobile visual fix for selects */
+            -moz-appearance: none;
+            appearance: none;
+        }
+        select:disabled {
+            background-color: #f4f4f4;
+            cursor: not-allowed;
+        }
+        select:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+        #teamsResult {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f7f9fc;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        h2 {
+            color: #1a73e8;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        li:hover {
+            background-color: khaki;
+            transform: translateY(-2px);   
+        }
+        li strong {
+            color: #333;
+        }
+        li span {
+            color: green;
+            font-weight: bold;
+            font-family: "Courier New", Courier, monospace;
+            display: block; /* Make ID appear on a new line on mobile */
+            margin-top: 4px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            font-size: medium; /* Adjusted size */
+            color: darkgreen;
+            width: 100%;
+        }
+	
+       /* Modern, Clean Table Style (MADE SMALLER) */
+      .styled-table {
+        border-collapse: collapse;
+        margin: 15px auto; /* Reduced vertical margin, centered */
+        font-size: 0.85em; /* Smaller font for a compact look */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90%; /* Fixed width for better control */
+        max-width: 600px; /* Maximum width for the table */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+        border-radius: 8px; /* Slightly smaller border radius */
+        overflow: hidden; 
+      }
+    
+      .styled-table thead tr {
+        background-color: #007bff; 
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+      }
+    
+      .styled-table th,
+      .styled-table td {
+        padding: 8px 6px; /* Reduced cell padding to tighten the table */
+        border: none; 
+      }
+
+      /* Specific style for S.No. column to center it */
+      .styled-table th:first-child, 
+      .styled-table td:first-child {
+        text-align: center;
+        width: 10%; /* Dedicate a smaller width to S.No. */
+      }
+    
+      .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd; 
+        transition: background-color 0.3s;
+      }
+    
+      .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3; 
+      }
+    
+      .styled-table tbody tr:hover {
+        background-color: #cce5ff; 
+        font-weight: 500;
+      }
+    
+      .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #007bff; 
+      }
+      
+      /* Caption Styling */
+      .main-caption {
+        font-size: 1.3em; 
+        font-weight: 700;
+        color: #28a745; 
+        margin-bottom: 5px;
+        text-align: center;
+        padding-top: 10px;
+      }
+      
+      .sub-caption {
+        font-size: 0.8em; 
+        color: #6c757d;
+        text-align: center;
+        margin-bottom: 10px; 
+      }
+
+      /* ========================================================= */
+      /* MOBILE OPTIMIZATIONS (Max Width 600px) */
+      /* ========================================================= */
+      @media (max-width: 600px) {
+        body {
+            padding: 10px 5px; 
+        }
+        .container {
+            padding: 15px 10px;
+        }
+        h1 {
+            font-size: 1.2em; 
+            padding: 8px;
+        }
+        /* Table is forced to full width of container on mobile */
+        .styled-table {
+            width: 100%;
+            font-size: 0.75em; /* Smallest font for mobile screen density */
+            box-shadow: none; 
+            border-radius: 0;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 6px 4px; /* Minimal padding */
+        }
+        .main-caption {
+            font-size: 1.2em;
+        }
+        .sub-caption {
+            font-size: 0.7em;
+        }
+        .header-img {
+             display: none;
+        }
+      }
+
+	    /* ========== Gallery styles ========== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            padding: 20px 0;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: white;
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ========== Lightbox (overlay) styles ========== */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .lightbox-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 2em;
+            cursor: pointer;
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+<p align="center" class="header-img">
+<img alt="header" src="../Assets/images/header.png" width="1200"/>
+</p>
+<div class="container">
+<h1>Amrita Vishwa Vidyapeetham<br/> Smart India Hackathon - 2025<br/> Gallery</h1>
+
+  <div class="main-caption">Gallery Showcase</div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="Assets/images/gallery/.jpg" alt="Image 1"></div>
+          <div class="gallery-item"><img src="Assets/images/gallery/.jpg" alt="Image 2"></div>
+          <div class="gallery-item"><img src="Assets/images/gallery/.jpg" alt="Image 3"></div>
+          <div class="gallery-item"><img src="Assets/images/gallery/.jpg" alt="Image 4"></div>
+          <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightbox">
+        <span class="close-btn" id="lightboxClose">&times;</span>
+        <img src="" alt="Enlarged Image" id="lightboxImg">
+    </div>	
+<footer>
+<p>© SIH 2025, Institution's Innovation Council (IIC) 8.0, Amrita Vishwa Vidyapeetham, Coimbatore. </p>
+</footer>
+  <style>
+    /* Scrollable horizontal gallery */
+    .gallery-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 15px 0;
+    }
+    .gallery-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .gallery-scroll::-webkit-scrollbar-thumb {
+      background: #aaa;
+      border-radius: 8px;
+    }
+    .gallery-item {
+      flex: 0 0 auto;
+      width: 180px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+  </style>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+      if (index < 0) index = galleryItems.length - 1;
+      if (index >= galleryItems.length) index = 0;
+      currentIndex = index;
+      lightboxImg.src = galleryItems[currentIndex].src;
+      lightbox.style.display = 'flex';
+    };
+
+    galleryItems.forEach((img, index) => {
+      img.addEventListener('click', () => showImage(index));
+    });
+
+    closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+        if (e.key === 'Escape') lightbox.style.display = 'none';
+      }
+    });
+  </script>	
+</body>
+</html>
