@@ -229,58 +229,78 @@ Updated Date: 03rd Oct 2025
       }
 
 	    /* ========== Gallery styles ========== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
-            padding: 20px 0;
-        }
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            background-color: white;
-            position: relative;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .gallery-item img:hover {
-            transform: scale(1.03);
-        }
+         /* Scrollable horizontal gallery */
+	  .gallery-scroll {
+	    display: flex;
+	    gap: 12px;
+	    overflow-x: auto;
+	    scroll-behavior: smooth;
+	    padding: 15px 0;
+	  }
+	  .gallery-scroll::-webkit-scrollbar {
+	    height: 8px;
+	  }
+	  .gallery-scroll::-webkit-scrollbar-thumb {
+	    background: #aaa;
+	    border-radius: 8px;
+	  }
+	  .gallery-item {
+	    flex: 0 0 auto;
+	    width: 180px;
+	    border: 1px solid #ccc;
+	    border-radius: 8px;
+	    overflow: hidden;
+	    cursor: pointer;
+	    transition: transform 0.3s ease;
+	  }
+	  .gallery-item img {
+	    width: 100%;
+	    height: 130px;
+	    object-fit: cover;
+	  }
+	  .gallery-item:hover {
+	    transform: scale(1.03);
+	  }
 
         /* ========== Lightbox (overlay) styles ========== */
-        .lightbox-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .lightbox-overlay img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-        .lightbox-overlay .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: #fff;
-            font-size: 2em;
-            cursor: pointer;
-            user-select: none;
-        }
+		.lightbox-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.85);
+			display: none;
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+			flex-direction: column;
+			padding: 20px;
+		  }
+	  .lightbox-content {
+			text-align: center;
+		  }
+	  .lightbox-overlay img {
+			max-width: 90%;
+			max-height: 80vh;
+			border-radius: 8px;
+			box-shadow: 0 0 20px rgba(255,255,255,0.3);
+		  }
+	  .lightbox-caption {
+			color: #fff;
+			font-size: 1rem;
+			margin-top: 12px;
+			font-family: 'Segoe UI', sans-serif;
+		  }
+	  .close-btn {
+			position: absolute;
+			top: 15px;
+			right: 25px;
+			color: #fff;
+			font-size: 2rem;
+			cursor: pointer;
+			user-select: none;
+		  }
 
     </style>
 </head>
@@ -292,16 +312,16 @@ Updated Date: 03rd Oct 2025
 <h1>Amrita Vishwa Vidyapeetham<br/> Smart India Hackathon - 2025<br/> Gallery</h1>
 
   <div class="main-caption">Inaugural Function</div>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Ram.jpg" alt="Mr. Ramaguru R"></div>
-          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Prashant.jpg" alt="Dr. Prashant R Nair"></div>
-          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Tejhu.jpg" alt="Ms. Tejhashwini C B"></div>
-          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Hansica.jpg" alt="Ms. Nagasree Hansica"></div>
-          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inagural_Hema.jpg" alt="Mr. Hemadhri P C"></div>
-		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Krishnan.jpg" alt="Mr. Krishnan"></div>
-		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Premjith.jpg" alt="Dr. Premjith"></div>
-		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Rahul.jpg" alt="Dr. Rahul Satheesh"></div>
-		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Audience.jpg" alt="Audience"></div>
+        <div class="gallery-scroll">
+          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Ram.jpg"  data-caption="Inaugural Address by Mr. Ramaguru Radharksihnan, SPOC - SIH2025 & Convener - IIC" alt="Mr. Ramaguru R" loading="lazy"></div>
+          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Prashant.jpg" data-caption="Inaugural Address by Dr. Prashant R. Nair, Associate Director - IQAC & President - IIC" alt="Dr. Prashant R Nair" loading="lazy"></div>
+          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Tejhu.jpg" alt="Ms. Tejhashwini C B" loading="lazy"></div>
+          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Hansica.jpg" alt="Ms. Nagasree Hansica" loading="lazy"></div>
+          <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inagural_Hema.jpg" alt="Mr. Hemadhri P C" loading="lazy"></div>
+		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Krishnan.jpg" alt="Mr. Krishnan" loading="lazy"></div>
+		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Premjith.jpg" alt="Dr. Premjith" loading="lazy"></div>
+		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Rahul.jpg" alt="Dr. Rahul Satheesh" loading="lazy"></div>
+		  <div class="gallery-item"><img src="../Assets/images/gallery/Inaugural/Inaugural_Audience.jpg" alt="Audience" loading="lazy"></div>
         </div>
     </div>
 
@@ -315,76 +335,46 @@ Updated Date: 03rd Oct 2025
     <div class="lightbox-overlay" id="lightbox">
         <span class="close-btn" id="lightboxClose">&times;</span>
         <img src="" alt="Enlarged Image" id="lightboxImg">
+		 <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>	
 <footer>
 <p>© SIH 2025, Institution's Innovation Council (IIC) 8.0, Amrita Vishwa Vidyapeetham, Coimbatore. </p>
 </footer>
-  <style>
-    /* Scrollable horizontal gallery */
-    .gallery-scroll {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 15px 0;
-    }
-    .gallery-scroll::-webkit-scrollbar {
-      height: 8px;
-    }
-    .gallery-scroll::-webkit-scrollbar-thumb {
-      background: #aaa;
-      border-radius: 8px;
-    }
-    .gallery-item {
-      flex: 0 0 auto;
-      width: 180px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 130px;
-      object-fit: cover;
-    }
-    .gallery-item:hover {
-      transform: scale(1.03);
-    }
-  </style>
-
+  
   <script>
     const galleryItems = document.querySelectorAll('.gallery-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
+	const lightboxCaption = document.getElementById('lightboxCaption');
     const closeBtn = document.getElementById('lightboxClose');
     let currentIndex = 0;
 
     const showImage = (index) => {
-      if (index < 0) index = galleryItems.length - 1;
-      if (index >= galleryItems.length) index = 0;
-      currentIndex = index;
-      lightboxImg.src = galleryItems[currentIndex].src;
-      lightbox.style.display = 'flex';
-    };
+    if (index < 0) index = galleryItems.length - 1;
+    if (index >= galleryItems.length) index = 0;
+    currentIndex = index;
+    const img = galleryItems[currentIndex];
+    lightboxImg.src = img.dataset.full || img.src;
+    lightboxCaption.textContent = img.dataset.caption || "";
+    lightbox.style.display = 'flex';
+  };
 
-    galleryItems.forEach((img, index) => {
-      img.addEventListener('click', () => showImage(index));
-    });
+  galleryItems.forEach((img, index) => {
+    img.addEventListener('click', () => showImage(index));
+  });
 
-    closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) lightbox.style.display = 'none';
-    });
+  closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.style.display = 'none';
+  });
 
-    document.addEventListener('keydown', (e) => {
-      if (lightbox.style.display === 'flex') {
-        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-        if (e.key === 'Escape') lightbox.style.display = 'none';
-      }
-    });
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'Escape') lightbox.style.display = 'none';
+    }
+  });
   </script>	
 </body>
 </html>
