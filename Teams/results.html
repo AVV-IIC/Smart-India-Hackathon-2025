@@ -228,32 +228,6 @@ Updated Date: 03rd Oct 2025
         }
       }
 
-	    /* ========== Gallery styles ========== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
-            padding: 20px 0;
-        }
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            background-color: white;
-            position: relative;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .gallery-item img:hover {
-            transform: scale(1.03);
-        }
-
         /* ========== Lightbox (overlay) styles ========== */
         .lightbox-overlay {
             position: fixed;
@@ -440,21 +414,6 @@ Updated Date: 03rd Oct 2025
 </div>
 </div>
 
-  <div class="main-caption">Gallery Showcase</div>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="gallery/image1.jpg" alt="Image 1"></div>
-          <div class="gallery-item"><img src="gallery/image2.jpg" alt="Image 2"></div>
-          <div class="gallery-item"><img src="gallery/image3.jpg" alt="Image 3"></div>
-          <div class="gallery-item"><img src="gallery/image4.jpg" alt="Image 4"></div>
-          <!-- Add more images as needed -->
-        </div>
-    </div>
-
-    <!-- Lightbox Overlay -->
-    <div class="lightbox-overlay" id="lightbox">
-        <span class="close-btn" id="lightboxClose">&times;</span>
-        <img src="" alt="Enlarged Image" id="lightboxImg">
-    </div>	
 <footer>
 <p>© SIH 2025, Institution's Innovation Council (IIC) 8.0, Amrita Vishwa Vidyapeetham, Coimbatore. </p>
 </footer>
