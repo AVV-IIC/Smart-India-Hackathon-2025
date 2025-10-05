@@ -340,16 +340,17 @@ Updated Date: 03rd Oct 2025
 <footer>
 <p>© SIH 2025, Institution's Innovation Council (IIC) 8.0, Amrita Vishwa Vidyapeetham, Coimbatore. </p>
 </footer>
-  
-  <script>
-    const galleryItems = document.querySelectorAll('.gallery-item img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-	const lightboxCaption = document.getElementById('lightboxCaption');
-    const closeBtn = document.getElementById('lightboxClose');
-    let currentIndex = 0;
+ <script>
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('lightboxClose');
+  let currentIndex = 0;
+  let autoSlideInterval = null;
 
-    const showImage = (index) => {
+  // Show image + caption
+  const showImage = (index) => {
     if (index < 0) index = galleryItems.length - 1;
     if (index >= galleryItems.length) index = 0;
     currentIndex = index;
@@ -359,22 +360,54 @@ Updated Date: 03rd Oct 2025
     lightbox.style.display = 'flex';
   };
 
+  // Auto-scroll function
+  const startAutoScroll = () => {
+    stopAutoScroll(); // clear previous timer
+    autoSlideInterval = setInterval(() => {
+      showImage(currentIndex + 1);
+    }, 4000); // change every 4 seconds (adjust if needed)
+  };
+
+  const stopAutoScroll = () => {
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
+  };
+
+  // Open image on click
   galleryItems.forEach((img, index) => {
-    img.addEventListener('click', () => showImage(index));
+    img.addEventListener('click', () => {
+      showImage(index);
+      startAutoScroll();
+    });
   });
 
-  closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+  // Close lightbox
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    stopAutoScroll();
+  });
   lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) lightbox.style.display = 'none';
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (lightbox.style.display === 'flex') {
-      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-      if (e.key === 'Escape') lightbox.style.display = 'none';
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+      stopAutoScroll();
     }
   });
-  </script>	
+
+  // Keyboard navigation + pause on manual action
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+      stopAutoScroll(); // pause auto scroll when user interacts
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'Escape') {
+        lightbox.style.display = 'none';
+        stopAutoScroll();
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
